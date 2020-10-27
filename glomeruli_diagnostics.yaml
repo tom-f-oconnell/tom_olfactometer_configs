@@ -1,0 +1,140 @@
+
+# NOTE: this config file is currently only valid for the <insert which rig name
+# here after making valid> olfactometer, and would need to be duplicated with
+# only these values changed appropriately to work on the other scope
+################################################################################
+# Rig / olfactometer specific valve / wiring configuration
+# (ignored by the configuration generator, except for available_valve_pins)
+################################################################################
+# This sections exists since I have not yet implemented some orthogonal way of
+# specifying the setup, and the corresponding wiring / available pins / etc on
+# each.
+
+# Other things (currently variables in the .ino) that I'll need to support
+# rig-specific-lookups for at [upload/run]-time:
+# - reserved_pins
+# - timing_output_pin [+ enable_timing_output, if not using pin=0 to disable
+#   this too]
+# - external_timing_pin
+# - follow_hardware_timing (though maybe just make this a separate config file
+#   that was used for the EAG, cause that will probably only be used in that
+#   case...
+
+# TODO TODO TODO update both variables below to the correct pins for the
+# olfactometer i end up starting with
+
+# Note that this does not include the balance_pin, which is handled separately.
+# This is currently only used in the generator, though if any pins are
+# considered reserved by the firmware on the particular hardware used, it will
+# intentionally trigger an error.
+# NOTE: the newer olfactometer (Remy's ~clone) I am planning on starting with
+# has 1/12 valves as the normally open balance, and the valve that would be
+# driven by pin 12 is currently broken, so we have 10 valves for odors
+# (1 fewer if we want a solvent in *every* recording, rather than just in maybe
+# the last diagnostic panel)
+available_valve_pins: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+# NOTE: this is currently hardcoded in the .ino, and thus this is ignored, but
+# i should implement this type of configuration, if not some other type of rig
+# specific support
+balance_pin: 31
+
+# TODO TODO implement some orthogonal storage / configuration of setup specific
+# parameters like available pins / balance_pin / etc, to avoid having to
+# duplicate config files just to change those
+# TODO maybe also implement things like rig -> arduino version -> reserved_pins
+# (& similar variable) translation, rather than having to explicitly specify for
+# each rig, even though it just depends on the arduino version
+
+
+################################################################################
+# Parameters used by the YAML configuration generator
+################################################################################
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: True
+
+# TODO check the empty lines between list items doesnt break yaml parsing
+odors:
+ - name: 2,3-butanedione
+   log10_conc: -6
+   # TODO maybe get rest of code to print out extra odor info (like this,
+   # otherwise unparsed, key) at run time?
+   glomerulus: VA2
+
+ # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
+ # currently unknown but maybe 5-20%) cleaning ammonia we have in the lab (in
+ # water)
+ - name: 5% cleaning ammonia in water
+   # TODO either convert 5% to log10_conc or ensure that lack of the key is
+   # supported (at least in the basic.py generator)
+   # (might want to support lack of conc anyway, for presenting stuff like
+   # natural odors w/o known concentrations)
+   glomerulus: VM1
+
+ - name: geranyl acetate
+   log10_conc: -4
+   glomerulus: VA6
+
+ - name: 2-butanone
+   log10_conc: -6
+   glomerulus: VM7
+
+ - name: methyl salicylate
+   log10_conc: -3
+   glomerulus: DL1
+
+ # TODO did i dilute this + prepare odor vials down to -6, or just down to
+ # originally planned -5?
+ - name: trans-2-hexenal
+   log10_conc: -6
+   glomerulus: DL5
+
+ - name: phenylacetaldehyde
+   log10_conc: -5
+   glomerulus: VL2a
+
+ # TODO did i dilute this + prepare odor vials down to -6, or just down to
+ # originally planned -5?
+ - name: methyl acetate
+   log10_conc: -6
+   glomerulus: DM4
+
+# TODO check rounding handling is correct
+# TODO try to share implementation of this timing reformatting across
+# generators?
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 2
+pulse_s: 1
+post_pulse_s: 11
+
+
+################################################################################
+# Parameters parsed directly by the `olfactometer` script
+# (ignored by the configuration generator)
+################################################################################
+
+# TODO if i decide to implement this...
+# see note in olfactometer/generator/basic.py
+#generator: basic
+
+# was originally thinking about having this type of the `olfactometer` timing
+# config as input that would just be passed through, but now i'm thinking i'll
+# reformat float seconds to us in the generator...
+#settings:
+#  # The parameters under this key are for specifying the timing of
+#  # individual trials (each with a single pulse from the valve(s)).
+#  # All trials will share this timing.
+#  # All of these parameters are in units of microseconds.
+#  timing:
+#    # Baseline period.
+#    pre_pulse_us: 500000
+#
+#    # How long the valve(s) will actually be delivering odor for.
+#    pulse_us: 5000000
+#
+#    # Delay before next trial.
+#    # NOTE: the time from offset of the pulse to the onset of the
+#    # next trial (if there is one) will be:
+#    # (post_pulse_us + pre_pulse_us)
+#    post_pulse_us: 4500000
+
