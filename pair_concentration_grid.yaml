@@ -6,15 +6,6 @@
 # Rig / olfactometer specific valve / wiring configuration
 # (ignored by the configuration generator, except for available_valve_pins)
 ################################################################################
-# This sections exists since I have not yet implemented some orthogonal way of
-# specifying the setup, and the corresponding wiring / available pins / etc on
-# each.
-
-# Other things (currently variables in the .ino) that I'll need to support
-# rig-specific-lookups for at [upload/run]-time:
-# - reserved_pins
-# - external_timing_pin
-
 # Note that this does not include the balance_pin, which is handled separately.
 # This is currently only used in the generator, though if any pins are
 # considered reserved by the firmware on the particular hardware used, it will
@@ -33,70 +24,53 @@ balance_pin: 31
 # olfactometers? 21 on the clone? same on both? soldered?
 timing_output_pin: 21
 
-# TODO TODO implement some orthogonal storage / configuration of setup specific
-# parameters like available pins / balance_pin / etc, to avoid having to
-# duplicate config files just to change those
-# TODO maybe also implement things like rig -> arduino version -> reserved_pins
-# (& similar variable) translation, rather than having to explicitly specify for
-# each rig, even though it just depends on the arduino version
-
-
 ################################################################################
 # Parameters used by the YAML configuration generator
 ################################################################################
-# If this is False, the odors will be presented in the order in the list below.
-randomize_presentation_order: True
 
-# TODO check the empty lines between list items doesnt break yaml parsing
-odors:
- - name: 2,3-butanedione
-   log10_conc: -6
-   # TODO maybe get rest of code to print out extra odor info (like this,
-   # otherwise unparsed, key) at run time?
-   glomerulus: VA2
+n_trials: 3
 
- # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
- # currently unknown but maybe 5-20%) cleaning ammonia we have in the lab (in
- # water)
- - name: 5% cleaning ammonia in water
-   # TODO either convert 5% to log10_conc or ensure that lack of the key is
-   # supported (at least in the basic.py generator)
-   # (might want to support lack of conc anyway, for presenting stuff like
-   # natural odors w/o known concentrations)
-   glomerulus: VM1
+randomize_first_ramped_odor: True
 
- - name: geranyl acetate
-   log10_conc: -4
-   glomerulus: VA6
+global_log10_concentrations: [-5, -4, -3]
 
- - name: 2-butanone
-   log10_conc: -6
-   glomerulus: VM7
+odor_pairs:
+  - pair:
+    - ethyl hexanoate
+    - 1-hexanol
+    #reason: high joint
+# TODO fill this out with the rest of the pairs in my evernote note "Tentative
+# pair choice for initial antennal experiments" after coming up with some
+# mechanism to run a sequence of YAML files (from one input to the generator)
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
+#  - pair:
+#    - name:  
+#    - name:  
+#    #reason:  
 
- - name: methyl salicylate
-   log10_conc: -3
-   glomerulus: DL1
-
- # TODO did i dilute this + prepare odor vials down to -6, or just down to
- # originally planned -5?
- - name: trans-2-hexenal
-   log10_conc: -6
-   glomerulus: DL5
-
- - name: phenylacetaldehyde
-   log10_conc: -5
-   glomerulus: VL2a
-
- # TODO did i dilute this + prepare odor vials down to -6, or just down to
- # originally planned -5?
- - name: methyl acetate
-   log10_conc: -6
-   glomerulus: DM4
-
-# TODO check rounding handling is correct
-# TODO try to share implementation of this timing reformatting across
-# generators?
-# Reformatted into settings.timing.*_us by the generator
 pre_pulse_s: 2
 pulse_s: 1
 post_pulse_s: 11
@@ -107,7 +81,7 @@ post_pulse_s: 11
 # (ignored by the configuration generator)
 ################################################################################
 
-generator: basic
+generator: pair_concentration_grid
 
 # was originally thinking about having this type of the `olfactometer` timing
 # config as input that would just be passed through, but now i'm thinking i'll
