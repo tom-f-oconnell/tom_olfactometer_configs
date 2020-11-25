@@ -24,14 +24,11 @@
 # driven by pin 12 is currently broken, so we have 10 valves for odors
 # (1 fewer if we want a solvent in *every* recording, rather than just in maybe
 # the last diagnostic panel)
-available_valve_pins: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+available_valve_pins: [2, 3, 4, 5, 7, 8, 9, 10, 11]
 
-# I think this is pin 48 on the older of the two olfactometers I use (Remy's
-# first, not her clone). 31 on her clone.
-balance_pin: 31
-# TODO TODO TODO what are the appropriate pins for this on the two
-# olfactometers? 21 on the clone? same on both? soldered?
+balance_pin: 7
 timing_output_pin: 21
+recording_indicator_pin: 20
 
 # TODO TODO implement some orthogonal storage / configuration of setup specific
 # parameters like available pins / balance_pin / etc, to avoid having to
