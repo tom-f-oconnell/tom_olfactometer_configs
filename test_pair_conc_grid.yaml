@@ -10,7 +10,7 @@ recording_indicator_pin: 20
 timing_output_pin: 21
 
 
-n_trials: 2
+n_trials: 1
 
 randomize_pair_order: True
 randomize_first_ramped_odor: True
@@ -20,7 +20,8 @@ randomize_first_ramped_odor: True
 # avaible_valve_pins is not.
 randomize_pairs_to_manifolds: True
 
-global_log10_concentrations: [-5, -4, -3]
+#global_log10_concentrations: [-5, -4, -3]
+global_log10_concentrations: [-3]
 
 odor_pairs:
   - pair:
