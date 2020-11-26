@@ -1,38 +1,5 @@
 
-################################################################################
-# Parameters parsed directly by the `olfactometer` script
-# (ignored by the configuration generator)
-################################################################################
 generator: pair_concentration_grid
-
-################################################################################
-# Rig / olfactometer specific valve / wiring configuration
-# (ignored by the configuration generator, except for available_valve_pins)
-################################################################################
-# Note that these lists of available pins do not include their respective
-# *_balance_pin, which are handled separately. This is currently only used in
-# the generator, though if any pins are considered reserved by the firmware on
-# the particular hardware used, it will intentionally trigger an error.
-#available_valve_pins: [2, 3, 4, 5, 8, 9, 10, 11]
-#balance_pin: 7
-
-# 2 manifold case
-available_group1_valve_pins: [2, 3, 4, 5]
-available_group2_valve_pins: [8, 9, 10, 11]
-group1_balance_pin: 7
-group2_balance_pin: 12
-
-recording_indicator_pin: 20
-timing_output_pin: 21
-
-# This is the pin this is currently connected to, but my code doesn't yet
-# support this. Currently just planning to always have the mirror allowing light
-# through, during my recordings.
-#mirror_pin: 33
-
-################################################################################
-# Parameters used by the YAML configuration generator
-################################################################################
 
 n_trials: 3
 

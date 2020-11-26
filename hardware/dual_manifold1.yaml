@@ -1,0 +1,32 @@
+
+# Note that this does not include the balance_pin, which is handled separately.
+# This is currently only used in the generator, though if any pins are
+# considered reserved by the firmware on the particular hardware used, it will
+# intentionally trigger an error.
+# NOTE: the newer olfactometer (Remy's ~clone) I am planning on starting with
+# has 1/12 valves as the normally open balance, and the valve that would be
+# driven by pin 12 is currently broken, so we have 10 valves for odors
+# (1 fewer if we want a solvent in *every* recording, rather than just in maybe
+# the last diagnostic panel)
+#available_valve_pins: [2, 3, 4, 5, 8, 9, 10, 11]
+#balance_pin: 7
+
+# 2 manifold case
+available_group1_valve_pins: [2, 3, 4, 5]
+available_group2_valve_pins: [8, 9, 10, 11]
+group1_balance_pin: 7
+group2_balance_pin: 12
+
+timing_output_pin: 21
+recording_indicator_pin: 20
+
+# This is the pin this is currently connected to, but my code doesn't yet
+# support this. Currently just planning to always have the mirror allowing light
+# through, during my recordings. (actually floating now b/c i couldn't resolve
+# influence from partially connected olfactometer of remys when not using it)
+#mirror_pin: 33
+
+# TODO maybe also implement things like rig -> arduino version -> reserved_pins
+# (& similar variable) translation, rather than having to explicitly specify for
+# each rig, even though it just depends on the arduino version
+
