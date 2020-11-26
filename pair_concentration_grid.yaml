@@ -1,5 +1,11 @@
 
 ################################################################################
+# Parameters parsed directly by the `olfactometer` script
+# (ignored by the configuration generator)
+################################################################################
+generator: pair_concentration_grid
+
+################################################################################
 # Rig / olfactometer specific valve / wiring configuration
 # (ignored by the configuration generator, except for available_valve_pins)
 ################################################################################
@@ -7,15 +13,12 @@
 # *_balance_pin, which are handled separately. This is currently only used in
 # the generator, though if any pins are considered reserved by the firmware on
 # the particular hardware used, it will intentionally trigger an error.
-#available_valve_pins: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+#available_valve_pins: [2, 3, 4, 5, 8, 9, 10, 11]
+#balance_pin: 7
+
 # 2 manifold case
 available_group1_valve_pins: [2, 3, 4, 5]
 available_group2_valve_pins: [8, 9, 10, 11]
-
-# I think this is pin 48 on the older of the two olfactometers I use (Remy's
-# first, not her clone). 31 on her clone.
-# Currently only valid single manifold case.
-#balance_pin: 31
 group1_balance_pin: 7
 group2_balance_pin: 12
 
@@ -32,6 +35,10 @@ timing_output_pin: 21
 ################################################################################
 
 n_trials: 3
+
+pre_pulse_s: 2
+pulse_s: 1
+post_pulse_s: 11
 
 randomize_pair_order: True
 randomize_first_ramped_odor: True
@@ -92,15 +99,4 @@ odor_pairs:
     - methyl salicylate
     - trans-2-hexen-1-ol
     reason: low Hallem correlation
-
-pre_pulse_s: 2
-pulse_s: 1
-post_pulse_s: 11
-
-
-################################################################################
-# Parameters parsed directly by the `olfactometer` script
-# (ignored by the configuration generator)
-################################################################################
-generator: pair_concentration_grid
 

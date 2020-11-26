@@ -1,4 +1,6 @@
 
+generator: pair_concentration_grid
+
 # 2 manifold case
 available_group1_valve_pins: [2, 3, 4, 5]
 available_group2_valve_pins: [8, 9, 10, 11]
@@ -11,6 +13,10 @@ timing_output_pin: 21
 
 
 n_trials: 1
+
+pre_pulse_s: 2
+pulse_s: 4
+post_pulse_s: 3
 
 randomize_pair_order: True
 randomize_first_ramped_odor: True
@@ -72,10 +78,4 @@ odor_pairs:
 #    - methyl salicylate
 #    - trans-2-hexen-1-ol
 #    reason: low Hallem correlation
-
-pre_pulse_s: 2
-pulse_s: 4
-post_pulse_s: 3
-
-generator: pair_concentration_grid
 
