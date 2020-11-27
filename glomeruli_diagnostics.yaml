@@ -3,9 +3,6 @@ generator: basic
 
 # TODO TODO TODO add support for n_trials parameter in basic.py generator
 
-# TODO check rounding handling is correct
-# TODO try to share implementation of this timing reformatting across
-# generators?
 # Reformatted into settings.timing.*_us by the generator
 pre_pulse_s: 2
 pulse_s: 1
@@ -23,7 +20,7 @@ odors:
    glomerulus: VA2
 
  # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
- # currently unknown but maybe 5-20%) cleaning ammonia we have in the lab (in
+ # currently unknown but maybe 3-20%) cleaning ammonia we have in the lab (in
  # water)
  - name: 5% cleaning ammonia in water
    # TODO either convert 5% to log10_conc or ensure that lack of the key is

@@ -10,7 +10,7 @@ settings:
 
     # How long the valve(s) will actually be delivering odor for.
     #pulse_us: 5000000
-    pulse_us: 500000
+    pulse_us: 2000000
 
     # Delay before next trial.
     # NOTE: the time from offset of the pulse to the onset of the
