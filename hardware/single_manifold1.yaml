@@ -2,8 +2,14 @@
 available_valve_pins: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 balance_pin: 12
 
-timing_output_pin: 21
-recording_indicator_pin: 20
+# These pins seem to be acting weird. I can't explain it as a bug, so maybe it
+# was static damage or something? Maybe best to replace the whole arduino if
+# so...
+#timing_output_pin: 21
+#recording_indicator_pin: 20
+# These pins seem to be behaving more as expected, from initial testing.
+timing_output_pin: 35
+recording_indicator_pin: 37
 
 #mirror_pin: 33
 

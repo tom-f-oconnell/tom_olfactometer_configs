@@ -17,8 +17,14 @@ available_group2_valve_pins: [8, 9, 10, 11]
 group1_balance_pin: 7
 group2_balance_pin: 12
 
-timing_output_pin: 21
-recording_indicator_pin: 20
+# These pins seem to be acting weird. I can't explain it as a bug, so maybe it
+# was static damage or something? Maybe best to replace the whole arduino if
+# so...
+#timing_output_pin: 21
+#recording_indicator_pin: 20
+# These pins seem to be behaving more as expected, from initial testing.
+timing_output_pin: 35
+recording_indicator_pin: 37
 
 # This is the pin this is currently connected to, but my code doesn't yet
 # support this. Currently just planning to always have the mirror allowing light
