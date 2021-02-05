@@ -1,12 +1,12 @@
 
 generator: basic
 
-# TODO TODO TODO add support for n_trials parameter in basic.py generator
-
 # Reformatted into settings.timing.*_us by the generator
-pre_pulse_s: 2
+pre_pulse_s: 5
 pulse_s: 1
-post_pulse_s: 11
+post_pulse_s: 14
+
+n_trials: 3
 
 # If this is False, the odors will be presented in the order in the list below.
 randomize_presentation_order: True

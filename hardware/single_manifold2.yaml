@@ -1,0 +1,23 @@
+
+# TODO TODO probably rewire (mine AND remy's second i've been using) so that
+# first 8 valves (including one balance, so probably have that first) are on one
+# DB9, so that i can have the most valves when reconfiguring to use two DB9s
+# from different manifolds
+
+# All digital pins 37-52 (inclusive) are connected up until the valve-side
+# DB9 breakout boards, which only have the first 6 pins connected to valves
+# at each breakout board, so that the 12 valves on the manifold get divided
+# evenly between the two breakout boards.
+# You may wire other 24v valves into the unconnected pins on the valve-side
+# breakouts, and then the pin numbers in 37-52 not mentioned here can be used to
+# drive them (43 & 44 for breakout 1 and 51 & 52 for breakout 2. breakout 1 has
+# the yellow tape on its breakouts + the DB9 cable).
+# Pin 50 is on breakout 2 as well, but it's used for the balance, so only
+# referencing it under 'balance_pin' below.
+available_valve_pins: [37, 38, 39, 40, 41, 42, 45, 46, 47, 48, 49]
+balance_pin: 50
+
+timing_output_pin: 34
+recording_indicator_pin: 36
+#mirror_pin: 
+
