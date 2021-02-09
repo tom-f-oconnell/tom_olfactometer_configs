@@ -6,7 +6,7 @@ pre_pulse_s: 5
 pulse_s: 1
 post_pulse_s: 14
 
-n_trials: 3
+n_repeats: 3
 
 # If this is False, the odors will be presented in the order in the list below.
 randomize_presentation_order: True
