@@ -1,0 +1,5 @@
+
+- maybe also include a config file that can define default pulse timing for a 
+  command line tool to just present single odors on command-line-specifiable
+  pins? (would require something corresponding to be implemented in the
+  olfactometer repo...)

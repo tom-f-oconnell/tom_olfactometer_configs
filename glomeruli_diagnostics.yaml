@@ -11,9 +11,14 @@ n_repeats: 3
 # If this is False, the odors will be presented in the order in the list below.
 randomize_presentation_order: True
 
-# TODO check the empty lines between list items doesnt break yaml parsing
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
 odors:
  - name: 2,3-butanedione
+   # TODO maybe rename all of these log10_conc things to vial_log10_conc or
+   # something indicating it's the v/v ratio in the liquid phase, not anything
+   # after any gas-phase dilution?
    log10_conc: -6
    # TODO maybe get rest of code to print out extra odor info (like this,
    # otherwise unparsed, key) at run time?
