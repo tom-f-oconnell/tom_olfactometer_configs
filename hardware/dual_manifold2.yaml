@@ -1,0 +1,25 @@
+
+# TODO rewire both of my manifolds such that one of the db9 connectors uses 8
+# pins for valves (and maybe have balance be first/last pin on each?)
+# rather than two db9 each handling 6 valves, so 2 manifold case can use 16
+# valves (and is that the max driveable w/ 2 of the valve driving chips i'm
+# using? or are they 10 channels each?)
+
+# Top row of Remy's second manifold that I had been working with, wired into the
+# yellow-tape-labelled DB9 cable to my newest (as of start of 2021) electronics
+# assembly.
+available_group1_valve_pins: [37, 38, 39, 40, 41]
+group1_balance_pin: 42
+
+# Top row of the manifold that I bought and assembled fully myself. Connected to
+# the DB9 cable WITHOUT the yellow tape, also connected to my newest
+# electronics. If the bottom row of this manifold (also via the cable with the
+# yellow tape) is connected, that configuration corresponds to
+# single_manifold2.yaml.
+available_group2_valve_pins: [45, 46, 47, 48, 49]
+group2_balance_pin: 50
+
+timing_output_pin: 34
+recording_indicator_pin: 36
+#mirror_pin:
+
