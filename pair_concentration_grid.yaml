@@ -1,11 +1,11 @@
 
 generator: pair_concentration_grid
 
-n_trials: 3
-
-pre_pulse_s: 2
+pre_pulse_s: 5
 pulse_s: 1
-post_pulse_s: 11
+post_pulse_s: 14
+
+n_repeats: 3
 
 randomize_pair_order: True
 randomize_first_ramped_odor: True
@@ -16,6 +16,13 @@ randomize_first_ramped_odor: True
 randomize_pairs_to_manifolds: True
 
 global_log10_concentrations: [-5, -4, -3]
+
+# TODO TODO TODO options for gas phase dilution in place of and/or alongside
+# existing vial concentration ranges. perhaps also specify (maybe just through
+# hardcoded defaults in olfactometer though) how low we can take each flow
+# meter [perhaps unit dpdt. can we read the limits?]
+# TODO also have 'require_
+total_flow_ml_per_min: 
 
 odor_pairs:
   - pair:
