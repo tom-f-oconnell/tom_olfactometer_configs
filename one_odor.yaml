@@ -2,6 +2,7 @@
 # Using this protocol to see how responsive the fly is overall / picking which
 # hemisphere to image.
 
+# TODO maybe move to just having the basic generator called by default?
 generator: basic
 # Just since we are only using one odor in this case, so we don't need to store
 # the config describing which odors (/pins) were presented on which trials, etc.
