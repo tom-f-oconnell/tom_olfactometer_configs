@@ -56,37 +56,37 @@ pin_sequence:
 
 flow_setpoints_sequence:
   - - port: COM13
-      sccm: 1800
+      sccm: 1600
     - port: COM14
       sccm: 200
     - port: COM15
       sccm: 200
   - - port: COM13
-      sccm: 1980
+      sccm: 1780
     - port: COM14
       sccm: 20
     - port: COM15
       sccm: 200
   - - port: COM13
-      sccm: 1998
+      sccm: 1798
     - port: COM14
       sccm: 2
     - port: COM15
       sccm: 200
   - - port: COM13
-      sccm: 1800
+      sccm: 1600
     - port: COM14
       sccm: 200
     - port: COM15
       sccm: 200
   - - port: COM13
-      sccm: 1800
+      sccm: 1600
     - port: COM14
       sccm: 200
     - port: COM15
       sccm: 200
   - - port: COM13
-      sccm: 1800
+      sccm: 1600
     - port: COM14
       sccm: 200
     - port: COM15
