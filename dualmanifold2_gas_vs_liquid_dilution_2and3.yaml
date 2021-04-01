@@ -32,13 +32,11 @@ pin_sequence:
   # The pins listed in each of these rows will all be concurrently 
   # switched ONCE (LOW for pre_pulse_us -> HIGH for pulse_us ->
   # LOW for post_pulse_us)
-  - pins: [47]
-  - pins: [45]
   - pins: [46]
   - pins: [46]
+  - pins: [46]
   - pins: [45]
-  # just to check if this is covered by sensitivity of PID,
-  # if previous more dilute stuff wasn't.
+  - pins: [45]
   - pins: [45]
 
 
@@ -57,7 +55,7 @@ pin_sequence:
 # COM15=group1 manifold (37-41, 42 balance)
 
 flow_setpoints_sequence:
-  # -5 (47) w/ 1/10 air dilution.
+  # -3 (46) w/ 1/10 air dilution.
   # Should be effectively -6 at fly.
   - - port: COM13
       sccm: 1600
@@ -66,16 +64,21 @@ flow_setpoints_sequence:
     - port: COM15
       sccm: 200
 
-  # -3 (45) w/ 1/1000 air dilution.
-  # Should be effectively -6 at fly.
   - - port: COM13
-      sccm: 1798
+      sccm: 1600
     - port: COM14
-      sccm: 2
+      sccm: 200
     - port: COM15
       sccm: 200
 
-  # -4 (46) w/ 1/100 air dilution.
+  - - port: COM13
+      sccm: 1600
+    - port: COM14
+      sccm: 200
+    - port: COM15
+      sccm: 200
+
+  # -2 (45) w/ 1/100 air dilution.
   # Should be effectively -6 at fly.
   - - port: COM13
       sccm: 1780
@@ -84,17 +87,6 @@ flow_setpoints_sequence:
     - port: COM15
       sccm: 200
 
-  # -4 (46) w/ 1/10 air dilution.
-  # Should be effectively -5 at fly.
-  - - port: COM13
-      sccm: 1600
-    - port: COM14
-      sccm: 200
-    - port: COM15
-      sccm: 200
-
-  # -3 (45) w/ 1/100 air dilution.
-  # Should be effectively -5 at fly.
   - - port: COM13
       sccm: 1780
     - port: COM14
@@ -102,26 +94,18 @@ flow_setpoints_sequence:
     - port: COM15
       sccm: 200
 
-  # only reason we might need this is to re-evaluate the range to test on PID,
-  # for sensitivity reasons
-  # 45
-  # -3 (45) w/ 1/10 air dilution.
-  # Should be effectively -4 at fly.
   - - port: COM13
-      sccm: 1600
+      sccm: 1780
     - port: COM14
-      sccm: 200
+      sccm: 20
     - port: COM15
       sccm: 200
 
 pins2odors:
   45:
     name: odor
-    log10_conc: -3
+    log10_conc: -2
   46:
     name: odor
-    log10_conc: -4
-  47:
-    name: odor
-    log10_conc: -5
+    log10_conc: -3
 

@@ -1,0 +1,68 @@
+settings:
+  # The parameters under this key are for specifying the timing of
+  # individual trials (each with a single pulse from the valve(s)).
+  # All trials will share this timing.
+  # All of these parameters are in units of microseconds.
+  timing:
+    pre_pulse_us: 2000000
+    pulse_us: 40000000
+    post_pulse_us: 14000000
+
+  timing_output_pin: 34
+  recording_indicator_pin: 36
+
+pin_sequence:
+  pin_groups:
+  - pins: [46]
+  - pins: [45]
+  - pins: [45]
+  - pins: [45]
+
+# Planning to use:
+# COM13=high flow
+# 
+# COM14=group2 manifold (45-49, 50 balance)
+#  - This manifold is closer and so will stay connected in single manifold case.
+#
+# COM15=group1 manifold (37-41, 42 balance)
+flow_setpoints_sequence:
+  # -3 (46) w/ 1/10 air dilution.
+  # Should be effectively -6 at fly.
+  - - port: COM13
+      sccm: 1600
+    - port: COM14
+      sccm: 200
+    - port: COM15
+      sccm: 200
+
+  # -2 (45) w/ 1/100 air dilution.
+  # Should be effectively -6 at fly.
+  - - port: COM13
+      sccm: 1780
+    - port: COM14
+      sccm: 20
+    - port: COM15
+      sccm: 200
+
+  - - port: COM13
+      sccm: 1780
+    - port: COM14
+      sccm: 20
+    - port: COM15
+      sccm: 200
+
+  - - port: COM13
+      sccm: 1780
+    - port: COM14
+      sccm: 20
+    - port: COM15
+      sccm: 200
+
+pins2odors:
+  45:
+    name: odor
+    log10_conc: -2
+  46:
+    name: odor
+    log10_conc: -3
+

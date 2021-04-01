@@ -17,12 +17,12 @@ randomize_pairs_to_manifolds: True
 
 global_log10_concentrations: [-5, -4, -3]
 
-# TODO TODO TODO options for gas phase dilution in place of and/or alongside
+# TODO TODO options for gas phase dilution in place of and/or alongside
 # existing vial concentration ranges. perhaps also specify (maybe just through
 # hardcoded defaults in olfactometer though) how low we can take each flow
 # meter [perhaps unit dpdt. can we read the limits?]
 # TODO also have 'require_
-total_flow_ml_per_min: 
+#total_flow_ml_per_min: 
 
 odor_pairs:
   - pair:
