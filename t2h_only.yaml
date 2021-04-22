@@ -18,7 +18,7 @@ settings:
   balance_pin: 0
   recording_indicator_pin: 36
   timing:
-    post_pulse_us: 14000000
-    pre_pulse_us: 5000000
-    pulse_us: 1000000
+    pre_pulse_us: 7000000
+    pulse_us: 3000000
+    post_pulse_us: 20000000
   timing_output_pin: 34

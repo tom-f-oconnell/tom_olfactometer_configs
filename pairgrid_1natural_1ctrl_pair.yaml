@@ -1,9 +1,9 @@
 
 generator: pair_concentration_grid
 
-pre_pulse_s: 5
-pulse_s: 1
-post_pulse_s: 14
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
 
 n_repeats: 3
 
