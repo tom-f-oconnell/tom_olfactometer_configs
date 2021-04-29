@@ -11,6 +11,7 @@ randomize_presentation_order: False
 n_repeats: 3
 
 odors:
+ - name: solvent for ethyl hexanoate
  - name: ethyl hexanoate
    log10_conc: -7
  - name: ethyl hexanoate
