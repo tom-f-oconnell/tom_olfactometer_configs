@@ -1,0 +1,17 @@
+
+generator: basic
+
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+# Need to turn this off so we can go from low -> high to dodge contamination concern.
+randomize_presentation_order: False
+
+n_repeats: 3
+
+odors:
+ - name: ethyl hexanoate
+   log10_conc: -7
+ - name: ethyl hexanoate
+   log10_conc: -6
