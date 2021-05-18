@@ -27,53 +27,62 @@ solvent_during_concentration_increase: True
 
 odor_pairs:
   - pair:
-    - ethyl hexanoate:
-      # This should override the values in 'global_log10_concentrations'
-      log10_concentrations: [-9, -8, -7]
-    - 1-hexanol
-    reason: high joint
+    - ethyl butyrate
+    - ethyl acetate
+    reason: two of most activating kiwi components
 
   - pair:
-    - butanal
-    - acetone
-    reason: high PMI
+    - 1-octen-3-ol
+    - 2-heptanone:
+      # This should override the values in 'global_log10_concentrations'
+      log10_concentrations: [-6, -5, -4]
+    reason: highly correlated pair from control mix
 
 #  - pair:
 #    - limonene
 #    - linalool
 #    reason: high joint
+#
 #  - pair:
 #    - 4-ethylguaiacol
 #    - ethyl lactate
 #    reason: high PMI
+#
 #  - pair:
 #    - trans-2-hexen-1-ol
 #    - alpha-pinene
 #    reason: low PMI
+#
 #  - pair:
 #    - hexyl acetate
 #    - furfural
 #    reason: low PMI
+#
 #  - pair:
 #    - 1-penten-3-ol
 #    - alpha-pinene
 #    reason: zero joint, high product-of-marginals
+#
 #  - pair:
 #    - methyl salicylate
 #    - hexyl hexanoate
 #    reason: zero joint, high product-of-marginals
+#
 #  - pair:
 #    - linalool
 #    - terpinolene
 #    reason: high Hallem correlation
+#
 #  - pair:
 #    - ethyl benzoate
 #    - methyl benzoate
 #    reason: high Hallem correlation
+#
 #  - pair:
 #    - 1-penten-3-ol
 #    - eugenol
 #    reason: low Hallem correlation
+#
 #  - pair:
 #    - methyl salicylate
 #    - trans-2-hexen-1-ol
