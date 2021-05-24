@@ -189,7 +189,7 @@ even though nothing would be printed to the terminal.
    would be appropriate.
 
    Again, paste the automatically-copied *generated* `.yaml` file into the ThorImage
-   experiment notes. Other metdata is not as critical as long as it was entered on a
+   experiment notes. Other metadata is not as critical as long as it was entered on a
    previous experiment.
 
    Start ThorImage, check ThorSync is started, and *then* press Enter in the terminal to
