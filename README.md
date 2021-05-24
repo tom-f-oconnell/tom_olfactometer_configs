@@ -54,14 +54,14 @@
   cd tom_olfactometer_configs
   ```
 
-- Run the valve test program and listen clicks for **each valve**.
+- Run the valve test program and listen for clicks for **each valve**.
 
   ```
   olf-test-valves -u
   ```
 
   The valve numbers get printed to the terminal as the program executes, and each
-  valve should be switched three times by default.
+  valve should be switched three consecutive times by default.
 
   The `-u` just re-uploads the firmware my code expects to the Arduino, so that if
   someone else was using their own Arduino scripts, it will still work. No subsequent
@@ -115,55 +115,58 @@ even though nothing would be printed to the terminal.
      Check that **all three** of the mass flow controllers are achieving their set
      points.
 
-  - ThorImage setup:
-    - 192 x 192 pixels (drag the slider to get the values not available in the drop down)
+   - ThorImage setup:
+     - 192 x 192 pixels (drag the slider to get the values not available in the drop down)
+ 
+     - ~5.9 - 6.3ish zoom. Pick a value when stepping with the piezo (as described below)
+       such that there is at least a roughly 5% margin on all sides of the antennal lobe
+       in case there is some slight drift.
+ 
+     - Initial plane should be *just* low enough that it's still *roughly* circular and
+       it's not just a couple glomeruli in plane. Set piezo step size to 12um in the live
+       mode and step through from 0 to 48 um to make sure that the antennal lobe stays in
+       the field of view in each plane.
+ 
+     - ~2.5 power, though I was using ~3-4 before when it seems the scope power might
+       have been slightly lower. Shouldn't matter too much.
+ 
+     - Either antennal lobe should be fine (fly should be mounted on scope so it is
+       facing you). Just pick the better looking one. If one has more inhomogenous
+       baseline fluorescence (some bright glomeruli), and all other things look equally
+       good, go for the side **without** this kind of elevated baseline.
+ 
+     - (now switch to the capture plane) Streaming -> Stimulus
+     - Raw data (not TIFF) output
+     - Enable fast Z
+     - Fast Z parameters: start=0, stop=48, step=12 (all same as when testing in live)
+     - 1 flyback frame
+ 
+     - Make sure the data is being saved to the numbered directory created before
+     - Name this experiment `glomeruli_diagnostics`
+ 
+     - When you ran `olf glomeruli_diagostics.yaml` above, it should have automatically
+       copied the name of a `.yaml` file it generated to your clipboard. Click into the
+       ThorImage experiment notes and paste the name of this generated file. If for some
+       reason it's no longer in your clipboard, the terminal running the stimulus
+       delivery will have the name of this file among the output it has printed so far.
+ 
+       Also in the note field, include:
+       ```
+       odors: <month>/<day> (when the odors were prepared. labelled on vials.)
+       surgeon: <your-name>
+       ```
+ 
+     - Make sure ThorSync is connected.
+ 
+   - Make sure the curtain is closed as much as it can be. There should be a fair bit of
+     overlap between the two sections of the curtain.
 
-    - ~5.9 - 6.3ish zoom. Pick a value when stepping with the piezo (as described below)
-      such that there is at least a roughly 5% margin on all sides of the antennal lobe
-      in case there is some slight drift.
-
-    - Initial plane should be *just* low enough that it's still *roughly* circular and
-      it's not just a couple glomeruli in plane. Set piezo step size to 12um in the live
-      mode and step through from 0 to 48 um to make sure that the antennal lobe stays in
-      the field of view in each plane.
-
-    - ~2.5 power, though I was using ~3-4 before when it seems the scope power might
-      have been slightly lower. Shouldn't matter too much.
-
-    - Either antennal lobe should be fine (fly should be mounted on scope so it is
-      facing you). Just pick the better looking one. If one has more inhomogenous
-      baseline fluorescence (some bright glomeruli), and all other things look equally
-      good, go for the side **without** this kind of elevated baseline.
-
-    - (now switch to the capture plane) Streaming -> Stimulus
-    - Raw data (not TIFF) output
-    - Enable fast Z
-    - Fast Z parameters: start=0, stop=48, step=12 (all same as when testing in live)
-    - 1 flyback frame
-
-    - Make sure the data is being saved to the numbered directory created before
-    - Name this experiment `glomeruli_diagnostics`
-
-    - When you ran `olf glomeruli_diagostics.yaml` above, it should have automatically
-      copied the name of a `.yaml` file it generated to your clipboard. Click into the
-      ThorImage experiment notes and paste the name of this generated file. If for some
-      reason it's no longer in your clipboard, the terminal running the stimulus
-      delivery will have the name of this file among the output it has printed so far.
-
-      Also in the note field, include:
-      ```
-      odors: <month>/<day>
-      surgeon: <your-name>
-      ```
-
-    - Make sure ThorSync is connected
-
-  - Turn the sensitivity on the manual manipulator all the way down and disable as many
-    of the axes as you can.
-
-  - Start ThorImage acquisition (and make sure ThorSync is also recording). **Now
-    switch back to the terminal and press Enter to start stimulus delivery**.
-
+   - Turn the sensitivity on the manual manipulator all the way down and disable as many
+     of the axes as you can.
+ 
+   - Start ThorImage acquisition (and make sure ThorSync is also recording). **Now
+     switch back to the terminal and press Enter to start stimulus delivery**.
+ 
 3. Two separate odor pair experiments
 
    ```
@@ -195,6 +198,36 @@ even though nothing would be printed to the terminal.
    **When this experiment finishes, the program in the terminal will automatically print
    the connections for the next pair, and wait for Enter again.** Repeat steps above for
    the other pair.
+
+4. "Anatomical" Z-stack to assist in glomeruli identifaction / registration
+
+   The ThorImage setup is similar here, but with a few important differences:
+
+   - **Turn on the red channel**, by turning the gain of the second PMT to a similar
+     value to the gain of the green channel PMT (~10, or at least no more than 15).
+
+     Also click the box (labelled "B", I think?) under the green box (labelled "A") on
+     the right.
+
+   - Set the resolution to 512x512
+
+   - Set the intial plane higher, such that it just barely gets the top of the antennal
+     lobe, rather than trying to capture much signal in the initial plane itself.
+
+   - Capture settings:
+     - Change mode from Streaming to Z/T-series mode
+
+     - In Z-stack settings: **step=0.5um, stop=60um**
+
+     - Enable the setting to allow streaming some number of planes at each Z depth, and
+       configure it to stream 5 frames at each depth. This is to try to be able to
+       filter out some motion.
+
+     - Uncheck the time series streaming box beneath the Z-stack section.
+
+     - Disconnect ThorSync (or just delete the data later)
+
+     - Name the experiment `anat`
 
 
 ## Installation
