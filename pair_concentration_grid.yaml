@@ -27,16 +27,14 @@ solvent_during_concentration_increase: True
 
 odor_pairs:
   - pair:
-    - ethyl butyrate
-    - ethyl acetate
-    reason: two of most activating kiwi components
+    - hexyl acetate
+    - furfural
+    reason: low PMI
 
   - pair:
-    - 1-octen-3-ol
-    - 2-heptanone:
-      # This should override the values in 'global_log10_concentrations'
-      log10_concentrations: [-6, -5, -4]
-    reason: highly correlated pair from control mix
+    - methyl salicylate
+    - hexyl hexanoate
+    reason: zero joint, high product-of-marginals
 
 #  - pair:
 #    - limonene
@@ -53,19 +51,10 @@ odor_pairs:
 #    - alpha-pinene
 #    reason: low PMI
 #
-#  - pair:
-#    - hexyl acetate
-#    - furfural
-#    reason: low PMI
 #
 #  - pair:
 #    - 1-penten-3-ol
 #    - alpha-pinene
-#    reason: zero joint, high product-of-marginals
-#
-#  - pair:
-#    - methyl salicylate
-#    - hexyl hexanoate
 #    reason: zero joint, high product-of-marginals
 #
 #  - pair:
