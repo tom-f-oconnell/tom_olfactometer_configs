@@ -209,7 +209,7 @@ even though nothing would be printed to the terminal.
      Also click the box (labelled "B", I think?) under the green box (labelled "A") on
      the right.
 
-   - Set the resolution to 512x512
+   - Set the resolution to 384x384 (384 = 192*2, to make for easy downsampling)
 
    - Set the intial plane higher, such that it just barely gets the top of the antennal
      lobe, rather than trying to capture much signal in the initial plane itself.
@@ -217,7 +217,7 @@ even though nothing would be printed to the terminal.
    - Capture settings:
      - Change mode from Streaming to Z/T-series mode
 
-     - In Z-stack settings: **step=0.5um, stop=60um**
+     - In Z-stack settings: **step=0.5um, stop=96um**
 
      - Enable the setting to allow streaming some number of planes at each Z depth, and
        configure it to stream 5 frames at each depth. This is to try to be able to
