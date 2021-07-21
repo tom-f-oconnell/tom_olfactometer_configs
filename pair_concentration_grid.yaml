@@ -10,6 +10,11 @@ n_repeats: 3
 randomize_pair_order: True
 randomize_first_ramped_odor: True
 
+# (At least temporarily, for select pairs) starting from mixture of highest
+# concentration of each pair component, and ramping down to (solvent, solvent), simply
+# the reverse of the pattern we used previously.
+reverse: True
+
 # Only relevant in the case when there are multiple manifolds. This case is
 # indicated when available_group[1/2]_valve_pins are defined and
 # avaible_valve_pins is not.
@@ -23,19 +28,36 @@ global_log10_concentrations: [-5, -4, -3]
 # as between (-4, -4)  and (-5, -5) (currently it's guaranteed that each increase in
 # concentration of the first odor to ramp will be followed by the corresponding
 # ramp for odor B). Assuming A was selected to ramp first in preceding example.
-solvent_during_concentration_increase: True
+solvent_during_concentration_ramps: True
+
+# TODO include comment on what was run to generate the pairs selected below / how they
+# were selected / what files i still have around that were artifacts in that process
+# (assuming some decisions were manual / the artifacts would be slightly diff if
+# regenerated now)
 
 odor_pairs:
   - pair:
-    - hexyl acetate
-    - furfural
-    reason: low PMI
+    - ethyl hexanoate:
+      # This should override the values in 'global_log10_concentrations'
+      log10_concentrations: [-9, -8, -7]
+    - 1-hexanol
+    reason: high joint
 
   - pair:
-    - methyl salicylate
-    - hexyl hexanoate
-    reason: zero joint, high product-of-marginals
+    - butanal
+    - acetone
+    reason: high PMI
 
+#  - pair:
+#    - hexyl acetate
+#    - furfural
+#    reason: low PMI
+#
+#  - pair:
+#    - methyl salicylate
+#    - hexyl hexanoate
+#    reason: zero joint, high product-of-marginals
+#
 #  - pair:
 #    - limonene
 #    - linalool
