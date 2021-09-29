@@ -4,7 +4,7 @@ generator: basic
 carrier_flow_ml_per_min: 1800.0
 odor_flow_ml_per_min: 200.0
 
-# The presence of either of the flow rate variables above should imply that the 
+# The presence of either of the flow rate variables above should imply that the
 # flow controllers are required, so this is saying that we will check the flow
 # controllers if we can, but otherwise we won't let that prevent the experiment
 # from starting. If connected, the set points and current flows will be checked.
@@ -24,6 +24,7 @@ randomize_presentation_order: True
 # generator? should i require specifying it in the 'odors:' list below?
 
 odors:
+ # keep
  - name: 2,3-butanedione
    # TODO maybe rename all of these log10_conc things to vial_log10_conc or
    # something indicating it's the v/v ratio in the liquid phase, not anything
@@ -31,29 +32,42 @@ odors:
    log10_conc: -6
    # TODO maybe get rest of code to print out extra odor info (like this,
    # otherwise unparsed, key) at run time?
+   # NOTE: not seeming to work in at least one fly (2021-04-28/1)!!!
+   # are there cases where this works? need to go up in conc or something?
    glomerulus: VA2
 
+ # (rather deep and signal not super strong)
  # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
  # currently unknown but maybe 3-20%) cleaning ammonia we have in the lab (in
  # water)
- - name: 5% cleaning ammonia in water
-   # TODO either convert 5% to log10_conc or ensure that lack of the key is
-   # supported (at least in the basic.py generator)
-   # (might want to support lack of conc anyway, for presenting stuff like
-   # natural odors w/o known concentrations)
-   glomerulus: VM1
+ #- name: 5% cleaning ammonia in water
+ #  # TODO either convert 5% to log10_conc or ensure that lack of the key is
+ #  # supported (at least in the basic.py generator)
+ #  # (might want to support lack of conc anyway, for presenting stuff like
+ #  # natural odors w/o known concentrations)
+ #  glomerulus: VM1
 
+ # keep
+ # NOTE: not seeming to work in at least one fly (2021-04-28/1)!!!
+ # are there cases where this works? need to go up in conc or something?
  - name: geranyl acetate
    log10_conc: -4
    glomerulus: VA6
 
+   # NOTE: not seeming to work in at least one fly (2021-04-28/1)!!!
+   # are there cases where this works? need to go up in conc or something?
  - name: 2-butanone
    log10_conc: -6
+   # Should be at least Or42a (according to Betty), which the Grabe atlas corresponds
+   # with specifically VM7d, where they associate VM7v w/ Or59c (which presumably
+   # doesn't respond to this concentration of 2-butanone?)
    glomerulus: VM7
 
- - name: methyl salicylate
-   log10_conc: -3
-   glomerulus: DL1
+   # (was a bit dirty and DL1 is high enough I wasn't always getting it [or it was being
+   # damaged...])
+   # - name: methyl salicylate
+   #   log10_conc: -3
+   #   glomerulus: DL1
 
  # TODO did i dilute this + prepare odor vials down to -6, or just down to
  # originally planned -5?
@@ -67,7 +81,34 @@ odors:
 
  # TODO did i dilute this + prepare odor vials down to -6, or just down to
  # originally planned -5?
+ # keep
  - name: methyl acetate
    log10_conc: -6
    glomerulus: DM4
 
+ # NOTE: could potentially do -5 here? see test data from 2021-09-28 (one fly)
+ - name: valeric acid
+   log10_conc: -4
+   glomerulus: DM6
+
+ - name: methyl octanoate
+   log10_conc: -3
+   glomerulus: DM2
+
+ - name: ethyl lactate
+   log10_conc: -6
+   glomerulus: VC4
+
+ - name: ethyl 3-hydroxybutyrate
+   log10_conc: -6
+   glomerulus: DM5
+
+# Notes on performance of this panel in particular flies:
+# 2021-05-11/2:
+# - t2h lights up ~DL5, but maybe weirdly south
+#
+# - MS does light up something arguably lateral to "DL5", but again it's surprisingly
+#   close to bottom of each plane image it's in. maybe just implies an extreme head
+#   angle? also something ~DM4 seems also included, an in next (2but)
+#
+# - 2but seems like it has 
