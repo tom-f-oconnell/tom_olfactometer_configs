@@ -95,8 +95,9 @@ odors:
    log10_conc: -3
    glomerulus: DM2
 
+ # TODO try -7,8 to avoid crosstalk issues
  - name: ethyl lactate
-   log10_conc: -6
+   log10_conc: -7
    glomerulus: VC4
 
  - name: ethyl 3-hydroxybutyrate
