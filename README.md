@@ -167,39 +167,27 @@ even though nothing would be printed to the terminal.
    - Start ThorImage acquisition (and make sure ThorSync is also recording). **Now
      switch back to the terminal and press Enter to start stimulus delivery**.
  
-3. Two separate odor pair experiments
+3. Kiwi approximation components and mix ramp
 
    ```
-   olf pair_concentration_grid.yaml
+   olf kiwi.yaml
    ```
-
-   The above command will randomly pick one of the two pairs we are currently focusing
-   on, and print the appropriate random connections to make for it. Connect these odors.
-   For each of these pair experiments, there will be a total of four solvent (pfo) vials
-   connected: two of which will still be connected downstream of the white tubing, and
-   two which will be randomly assigned to one of the normally-closed valves.
 
    Set up ThorImage as before. If necessary, make slight adjustments to make the initial
    plane look as it did in the previous experiment. Step through planes again on the
    piezo to check that the antennal lobe is still within the field of view.
 
-   Name the ThorImage experiment with some abbreviation of the odors, underscore
-   separated and no characters besides letters, numbers, underscore, and hyphen. For
-   example, if the current pair was 1-hexanol and ethyl hexanoate, `ehex_and_1-6ol`
-   would be appropriate.
-
-   Again, paste the automatically-copied *generated* `.yaml` file into the ThorImage
-   experiment notes. Other metadata is not as critical as long as it was entered on a
-   previous experiment.
-
    Start ThorImage, check ThorSync is started, and *then* press Enter in the terminal to
    start the experiment.
 
-   **When this experiment finishes, the program in the terminal will automatically print
-   the connections for the next pair, and wait for Enter again.** Repeat steps above for
-   the other pair.
+4. Ethyl acetate and ethyl butyrate ramps
+   ```
+   olf kiwi_ea_eb_only.yaml
+   ```
 
-4. "Anatomical" Z-stack to assist in glomeruli identifaction / registration
+   Otherwise follow instructions as in step above.
+
+5. "Anatomical" Z-stack to assist in glomeruli identifaction / registration
 
    The ThorImage setup is similar here, but with a few important differences:
 

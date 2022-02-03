@@ -1,0 +1,116 @@
+pin_sequence:
+  pin_groups:
+  - pins:
+    - 39
+    - 42
+  - pins:
+    - 39
+    - 42
+  - pins:
+    - 39
+    - 42
+
+  - pins:
+    - 45
+    - 50
+  - pins:
+    - 45
+    - 50
+  - pins:
+    - 45
+    - 50
+
+  - pins:
+    - 49
+    - 50
+  - pins:
+    - 49
+    - 50
+  - pins:
+    - 49
+    - 50
+
+  - pins:
+    - 46
+    - 50
+  - pins:
+    - 46
+    - 50
+  - pins:
+    - 46
+    - 50
+
+  - pins:
+    - 37
+    - 42
+  - pins:
+    - 37
+    - 42
+  - pins:
+    - 37
+    - 42
+
+  - pins:
+    - 41
+    - 42
+  - pins:
+    - 41
+    - 42
+  - pins:
+    - 41
+    - 42
+
+  - pins:
+    - 40
+    - 42
+  - pins:
+    - 40
+    - 42
+  - pins:
+    - 40
+    - 42
+
+  - pins:
+    - 38
+    - 42
+  - pins:
+    - 38
+    - 42
+  - pins:
+    - 38
+    - 42
+
+pins2odors:
+  37:
+    log10_conc: -3.5
+    name: ethyl butyrate
+  38:
+    log10_conc: 0
+    name: kiwi approx.
+  39:
+    log10_conc: -2
+    name: ethanol
+  40:
+    log10_conc: -1
+    name: kiwi approx.
+  41:
+    log10_conc: -2
+    name: kiwi approx.
+  45:
+    log10_conc: -3.6
+    name: isoamyl alcohol
+  46:
+    log10_conc: -4.2
+    name: ethyl acetate
+  49:
+    log10_conc: -3.7
+    name: isoamyl acetate
+
+settings:
+  balance_pin: 0
+  recording_indicator_pin: 36
+  timing:
+    post_pulse_us: 20000000
+    pre_pulse_us: 7000000
+    pulse_us: 3000000
+  timing_output_pin: 34
