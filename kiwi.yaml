@@ -1,116 +1,41 @@
-pin_sequence:
-  pin_groups:
-  - pins:
-    - 39
-    - 42
-  - pins:
-    - 39
-    - 42
-  - pins:
-    - 39
-    - 42
 
-  - pins:
-    - 45
-    - 50
-  - pins:
-    - 45
-    - 50
-  - pins:
-    - 45
-    - 50
+generator: basic
 
-  - pins:
-    - 49
-    - 50
-  - pins:
-    - 49
-    - 50
-  - pins:
-    - 49
-    - 50
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
 
-  - pins:
-    - 46
-    - 50
-  - pins:
-    - 46
-    - 50
-  - pins:
-    - 46
-    - 50
+n_repeats: 3
 
-  - pins:
-    - 37
-    - 42
-  - pins:
-    - 37
-    - 42
-  - pins:
-    - 37
-    - 42
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
 
-  - pins:
-    - 41
-    - 42
-  - pins:
-    - 41
-    - 42
-  - pins:
-    - 41
-    - 42
+odors:
+ - name: pfo
+   log10_conc: 0
 
-  - pins:
-    - 40
-    - 42
-  - pins:
-    - 40
-    - 42
-  - pins:
-    - 40
-    - 42
+ - name: ethanol
+   log10_conc: -2
 
-  - pins:
-    - 38
-    - 42
-  - pins:
-    - 38
-    - 42
-  - pins:
-    - 38
-    - 42
+ - name: isoamyl alcohol
+   log10_conc: -3.6
 
-pins2odors:
-  37:
-    log10_conc: -3.5
-    name: ethyl butyrate
-  38:
-    log10_conc: 0
-    name: kiwi approx.
-  39:
-    log10_conc: -2
-    name: ethanol
-  40:
-    log10_conc: -1
-    name: kiwi approx.
-  41:
-    log10_conc: -2
-    name: kiwi approx.
-  45:
-    log10_conc: -3.6
-    name: isoamyl alcohol
-  46:
-    log10_conc: -4.2
-    name: ethyl acetate
-  49:
-    log10_conc: -3.7
-    name: isoamyl acetate
+ - name: isoamyl acetate
+   log10_conc: -3.7
 
-settings:
-  balance_pin: 0
-  recording_indicator_pin: 36
-  timing:
-    post_pulse_us: 20000000
-    pre_pulse_us: 7000000
-    pulse_us: 3000000
-  timing_output_pin: 34
+ - name: ethyl acetate
+   log10_conc: -4.2
+
+ - name: ethyl butyrate
+   log10_conc: -3.5
+
+ - name: kiwi approx.
+   log10_conc: -2
+
+ - name: kiwi approx.
+   log10_conc: -1
+
+ - name: kiwi approx.
+   log10_conc: 0
+
