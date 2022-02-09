@@ -95,10 +95,9 @@ odors:
    log10_conc: -3
    glomerulus: DM2
 
- # TODO try -7,8 to avoid crosstalk issues
+ # TODO might need to further go down to -8 to avoid crosstalk issues. see how -7 looks.
  - name: ethyl lactate
-   # TODO TODO TODO actually change to -7
-   log10_conc: -6
+   log10_conc: -7
    glomerulus: VC4
 
  - name: ethyl 3-hydroxybutyrate
