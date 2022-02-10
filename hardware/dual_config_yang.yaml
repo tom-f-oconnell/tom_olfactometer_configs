@@ -1,0 +1,17 @@
+
+# Will be my manifold, taken from the downstairs system (the back manifold that only I
+# use, and which I only use the top row of).
+available_group1_valve_pins: [48, 47, 46, 45, 44]
+group1_balance_pin: 43
+
+available_group2_valve_pins: [49, 50, 51, 52, 53]
+group2_balance_pin: 2
+
+# "olfDispPin"
+timing_output_pin: 34
+
+# "scopePin"
+recording_indicator_pin: 33
+
+#mirror_pin:
+
