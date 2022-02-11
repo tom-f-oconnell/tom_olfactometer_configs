@@ -33,9 +33,11 @@ odor_pairs:
     - ethyl acetate:
       # This should override the values in 'global_log10_concentrations'
       log10_concentrations: [-6.2, -5.2, -4.2]
+      abbrev: ea
 
     - ethyl butyrate:
       log10_concentrations: [-5.5, -4.5, -3.5]
+      abbrev: eb
 
 # NOTE: not actually used since we redefine the concentration range for both ethyl
 # acetate and ethyl butyrate, but the code is currently written expecting this, and it

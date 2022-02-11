@@ -17,18 +17,23 @@ odors:
 
  - name: ethanol
    log10_conc: -2
+   abbrev: etoh
 
  - name: isoamyl alcohol
    log10_conc: -3.6
+   abbrev: IAA
 
  - name: isoamyl acetate
    log10_conc: -3.7
+   abbrev: IAol
 
  - name: ethyl acetate
    log10_conc: -4.2
+   abbrev: ea
 
  - name: ethyl butyrate
    log10_conc: -3.5
+   abbrev: eb
 
  - name: kiwi approx.
    log10_conc: -2
@@ -38,4 +43,5 @@ odors:
 
  - name: kiwi approx.
    log10_conc: 0
+   abbrev: kmix
 
