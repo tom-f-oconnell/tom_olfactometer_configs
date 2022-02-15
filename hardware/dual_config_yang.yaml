@@ -1,10 +1,13 @@
 
-# Will be my manifold, taken from the downstairs system (the back manifold that only I
-# use, and which I only use the top row of).
+# Will be my manifold, taken from the downstairs system (the back manifold that
+# only I use, and which I only use the top row of).
+# 
+# NOTE: when Yang has the cable we use for this connected in her (effectively)
+# single manifold configuration, it also has connects pins 43 and 44 to valves.
 available_group1_valve_pins: [37, 38, 39, 40, 41]
 group1_balance_pin: 42
 
-available_group2_valve_pins: [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+available_group2_valve_pins: [45, 46, 47, 48, 49, 50, 51, 52, 53]
 group2_balance_pin: 2
 
 # "olfDispPin"
