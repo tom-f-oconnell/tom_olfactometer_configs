@@ -21,11 +21,11 @@ odors:
 
  - name: isoamyl alcohol
    log10_conc: -3.6
-   abbrev: IAA
+   abbrev: IAol
 
  - name: isoamyl acetate
    log10_conc: -3.7
-   abbrev: IAol
+   abbrev: IAA
 
  - name: ethyl acetate
    log10_conc: -4.2
