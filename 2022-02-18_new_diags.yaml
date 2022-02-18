@@ -1,0 +1,61 @@
+
+generator: basic
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: True
+
+odors:
+ - name: ethyl crotonate
+   log10_conc: -6
+   glomerulus: VA2
+
+ - name: acetoin
+   log10_conc: -6
+   glomerulus: VM3
+
+ - name: ethyl benzoate
+   log10_conc: -6
+   glomerulus: VM5v
+
+ - name: hexanal
+   log10_conc: -6
+   glomerulus: VM5d
+
+ - name: 1-heptanol
+   log10_conc: -6
+   glomerulus: VC3
+
+ - name: methyl acetate
+   log10_conc: -8
+   glomerulus: DM4
+
+ - name: ethyl acetate
+   log10_conc: -8
+   glomerulus: DM1
+
+ # TODO did i dilute this + prepare odor vials down to -6, or just down to
+ # originally planned -5?
+ - name: trans-2-hexenal
+   log10_conc: -6
+   glomerulus: DL5
+
+ # NOTE: could potentially do -5 here? see test data from 2021-09-28 (one fly)
+ - name: valeric acid
+   log10_conc: -4
+   glomerulus: DM6
+
+ - name: methyl octanoate
+   log10_conc: -3
+   glomerulus: DM2
+
+# - name: 2-butanone
+#   log10_conc: -6
+#   glomerulus: VM7
+
