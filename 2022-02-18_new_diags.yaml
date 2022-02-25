@@ -21,19 +21,19 @@ odors:
    glomerulus: VM3
 
  - name: ethyl benzoate
-   log10_conc: -6
+   log10_conc: -5
    glomerulus: VM5v
 
  - name: hexanal
-   log10_conc: -6
+   log10_conc: -5
    glomerulus: VM5d
 
  - name: 1-heptanol
-   log10_conc: -6
+   log10_conc: -4
    glomerulus: VC3
 
  - name: methyl acetate
-   log10_conc: -8
+   log10_conc: -7
    glomerulus: DM4
 
  - name: ethyl acetate
@@ -46,14 +46,18 @@ odors:
    log10_conc: -6
    glomerulus: DL5
 
- # NOTE: could potentially do -5 here? see test data from 2021-09-28 (one fly)
- - name: valeric acid
-   log10_conc: -4
-   glomerulus: DM6
-
  - name: methyl octanoate
    log10_conc: -3
    glomerulus: DM2
+
+ - name: 3-methylthiol-1-propanol
+   log10_conc: -6
+   glomerulus: DM3
+
+ # NOTE: could potentially do -5 here? see test data from 2021-09-28 (one fly)
+# - name: valeric acid
+#   log10_conc: -4
+#   glomerulus: DM6
 
 # - name: 2-butanone
 #   log10_conc: -6
