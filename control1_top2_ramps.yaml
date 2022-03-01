@@ -1,0 +1,46 @@
+
+generator: pair_concentration_grid
+
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+randomize_pair_order: True
+randomize_first_ramped_odor: True
+
+# (At least temporarily, for select pairs) starting from mixture of highest
+# concentration of each pair component, and ramping down to (solvent, solvent), simply
+# the reverse of the pattern we used previously.
+#reverse: True
+
+# Only relevant in the case when there are multiple manifolds. This case is
+# indicated when available_group[1/2]_valve_pins are defined and
+# avaible_valve_pins is not.
+randomize_pairs_to_manifolds: True
+
+# Example of how this works: if odors A and B are presented at all combinations of
+# (-5, -4, -3), this will add (n_repeats of) solvent presentation (with the extra vials
+# and their own normally closed valve per manifold) between -3 of A and -3 of B, as well
+# as between (-4, -4)  and (-5, -5) (currently it's guaranteed that each increase in
+# concentration of the first odor to ramp will be followed by the corresponding
+# ramp for odor B). Assuming A was selected to ramp first in preceding example.
+solvent_during_concentration_ramps: True
+
+odor_pairs:
+  - pair:
+    - 1-octen-3-ol:
+      # This should override the values in 'global_log10_concentrations'
+      log10_concentrations: [-5, -4, -3]
+      abbrev: 1o3ol
+
+    - 2-heptanone:
+      log10_concentrations: [-7, -6, -5]
+      abbrev: 2h
+
+# NOTE: not actually used since we redefine the concentration range for both ethyl
+# acetate and ethyl butyrate, but the code is currently written expecting this, and it
+# should have the same number of steps as each of the ramps above
+global_log10_concentrations: [-5, -4, -3]
+
