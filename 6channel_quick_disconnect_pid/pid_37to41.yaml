@@ -1,0 +1,77 @@
+pin_sequence:
+  pin_groups:
+  - pins:
+    - 37
+    - 42
+  - pins:
+    - 37
+    - 42
+  - pins:
+    - 37
+    - 42
+
+  - pins:
+    - 38
+    - 42
+  - pins:
+    - 38
+    - 42
+  - pins:
+    - 38
+    - 42
+
+  - pins:
+    - 39
+    - 42
+  - pins:
+    - 39
+    - 42
+  - pins:
+    - 39
+    - 42
+
+  - pins:
+    - 40
+    - 42
+  - pins:
+    - 40
+    - 42
+  - pins:
+    - 40
+    - 42
+
+  - pins:
+    - 41
+    - 42
+  - pins:
+    - 41
+    - 42
+  - pins:
+    - 41
+    - 42
+
+pins2odors:
+  37:
+    name: ethanol
+    log10_conc: -2
+  38:
+    name: ethanol
+    log10_conc: -2
+  39:
+    name: ethanol
+    log10_conc: -2
+  40:
+    name: ethanol
+    log10_conc: -2
+  41:
+    name: ethanol
+    log10_conc: -2
+
+settings:
+  balance_pin: 0
+  recording_indicator_pin: 36
+  timing:
+    pre_pulse_us: 7000000
+    pulse_us: 3000000
+    post_pulse_us: 20000000
+  timing_output_pin: 34
