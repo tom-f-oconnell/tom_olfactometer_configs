@@ -17,6 +17,11 @@
 available_valve_pins: [37, 38, 39, 40, 41, 42, 45, 46, 47, 48, 49]
 balance_pin: 50
 
+# TODO test this is the right one
+odor_flow_controller_address: I
+
+carrier_flow_controller_address: H
+
 timing_output_pin: 34
 recording_indicator_pin: 36
 #mirror_pin: 

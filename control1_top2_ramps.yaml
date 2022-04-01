@@ -1,6 +1,14 @@
 
 generator: pair_concentration_grid
 
+total_flow_ml_per_min: 2000.0
+
+# NOTE: the odor flow here is twice what is for the kiwi experiments. EAG confirmed
+# that boosting the control flows led to a (slightly) better correspondence between
+# the activation intensities of the components of this mixture and the components of
+# the kiwi mixture this control was designed against.
+odor_flow_ml_per_min: 400.0
+
 pre_pulse_s: 7
 pulse_s: 3
 post_pulse_s: 20
