@@ -25,11 +25,11 @@ randomize_presentation_order: True
 
 odors:
  - name: 2,3-butanedione
-   log10_conc: -6
+   # Was at -6 for a while, but was also not consistently seeing VA2. Going to try -5
+   # for a bit. First fly did have some other signal, but not a huge deal either.
+   log10_conc: -5
    glomerulus: VA2/?
 
- # TODO did i dilute this + prepare odor vials down to -6, or just down to
- # originally planned -5?
  - name: trans-2-hexenal
    log10_conc: -6
    glomerulus: DL5
@@ -59,7 +59,6 @@ odors:
    log10_conc: -8
    glomerulus: DM1
 
- # TODO might need to further go down to -8 to avoid crosstalk issues. see how -7 looks.
  - name: ethyl lactate
    log10_conc: -7
    glomerulus: VC4
