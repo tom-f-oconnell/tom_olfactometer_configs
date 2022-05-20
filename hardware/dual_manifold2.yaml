@@ -42,4 +42,3 @@ recording_indicator_pin: 36
 # any of the disconnected outputs on one of the other manifolds (and closing the
 # corresponding NO valve).
 co2_pin: 53
-

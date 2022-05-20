@@ -32,3 +32,10 @@ timing_output_pin: 34
 recording_indicator_pin: 36
 #mirror_pin: 
 
+# A 2-way valve that normally dumps [potentially pre-diluted in air] CO2 directly to a
+# vacuum, but directs it into the odor needle manifold when switched.
+# Assumed that total flow rate through this valve is equal to flowrate through any one
+# of the other active odor manifolds, so that the total flow can be balanced by opening
+# any of the disconnected outputs on one of the other manifolds (and closing the
+# corresponding NO valve).
+co2_pin: 53
