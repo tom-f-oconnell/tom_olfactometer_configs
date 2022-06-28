@@ -1,0 +1,53 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+odors:
+ - name: pfo
+   log10_conc: 0
+
+ - name: kiwi approx.
+   log10_conc: 0
+   abbrev: kmix
+
+ - name: kiwi approx.
+   log10_conc: -1
+
+ - name: kiwi approx.
+   log10_conc: -2
+
+ - name: ethyl butyrate
+   log10_conc: -3.5
+   abbrev: eb
+
+ - name: ethyl acetate
+   log10_conc: -4.2
+   abbrev: ea
+
+ - name: isoamyl acetate
+   log10_conc: -3.7
+   abbrev: IAA
+
+ - name: isoamyl alcohol
+   log10_conc: -3.6
+   abbrev: IAol
+
+ - name: ethanol
+   log10_conc: -2
+   abbrev: etoh
+
+ - name: pfo
+   log10_conc: 0
+
