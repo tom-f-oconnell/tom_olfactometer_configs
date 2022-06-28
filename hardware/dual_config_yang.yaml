@@ -7,7 +7,8 @@
 available_group1_valve_pins: [37, 38, 39, 40, 41]
 group1_balance_pin: 42
 
-available_group2_valve_pins: [45, 46, 47, 48, 49, 50, 51, 52, 53]
+# available_group2_valve_pins: [45, 46, 47, 48, 49, 50, 51, 52, 53]
+available_group2_valve_pins: [49, 50, 51, 52, 53]
 group2_balance_pin: 2
 
 # "olfDispPin"
