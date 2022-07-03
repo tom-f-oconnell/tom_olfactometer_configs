@@ -1,0 +1,12 @@
+
+available_valve_pins: [43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53]
+balance_pin: 2
+
+# "olfDispPin"
+timing_output_pin: 34
+
+# "scopePin"
+recording_indicator_pin: 33
+
+mirror_pin: 35
+
