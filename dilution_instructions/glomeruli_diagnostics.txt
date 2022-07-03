@@ -1,0 +1,24 @@
+
+2,3-butanedione @ -5
+
+trans-2-hexenal @ -6
+
+methyl octanoate @ -3
+
+ethyl 3-hydroxybutyrate @ -6
+
+ethyl crotonate @ -6
+
+acetoin @ -6
+
+methyl acetate @ -7
+
+ethyl acetate @ -8
+
+ethyl lactate @ -7
+
+2-butanone @ -6
+
+
+50 vials (actually could be much less, if my strategy of starting at -3 and then
+mostly doing steps of 100 fold works well enough)

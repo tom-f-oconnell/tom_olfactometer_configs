@@ -1,0 +1,78 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+
+# NOTE: the odor flow here is twice what is for the kiwi experiments. EAG confirmed
+# that boosting the control flows led to a (slightly) better correspondence between
+# the activation intensities of the components of this mixture and the components of
+# the kiwi mixture this control was designed against.
+odor_flow_ml_per_min: 400.0
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+odors:
+ - name: pfo
+   log10_conc: 0
+
+ - name: methyl salicylate
+   log10_conc: -3
+   abbrev: ms
+
+ - name: valeric acid
+   log10_conc: -3
+   abbrev: va
+
+ - name: furfural
+   log10_conc: -4
+   abbrev: fur
+
+ - name: 2-heptanone
+   log10_conc: -5
+   abbrev: 2h
+
+ - name: 1-octen-3-ol
+   log10_conc: -3
+   abbrev: 1o3ol
+
+ - name: control mix
+   log10_conc: -2
+
+ - name: control mix
+   log10_conc: -1
+
+ - name: control mix
+   log10_conc: 0
+   abbrev: cmix
+
+ - name: methyl salicylate
+   log10_conc: -3
+   abbrev: ms
+
+ - name: valeric acid
+   log10_conc: -3
+   abbrev: va
+
+ - name: furfural
+   log10_conc: -4
+   abbrev: fur
+
+ - name: 2-heptanone
+   log10_conc: -5
+   abbrev: 2h
+
+ - name: 1-octen-3-ol
+   log10_conc: -3
+   abbrev: 1o3ol
+
+ - name: pfo
+   log10_conc: 0
+

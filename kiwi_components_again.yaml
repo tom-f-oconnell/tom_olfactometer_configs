@@ -15,6 +15,14 @@ n_repeats: 3
 randomize_presentation_order: False
 
 odors:
+ - name: pfo
+   log10_conc: 0
+
+ # Do I want this in my AL experiments though? Maybe it should be a separate
+ # config or recording?
+ #- name: REFERENCE_ODOR
+ #  log10_conc: ???
+
  - name: ethanol
    log10_conc: -2
    abbrev: etoh
@@ -64,6 +72,9 @@ odors:
  - name: ethyl butyrate
    log10_conc: -3.5
    abbrev: eb
+
+ #- name: REFERENCE_ODOR
+ #  log10_conc: ???
 
  - name: pfo
    log10_conc: 0

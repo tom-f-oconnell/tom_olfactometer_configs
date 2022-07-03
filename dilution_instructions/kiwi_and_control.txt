@@ -1,0 +1,40 @@
+
+All into 2mL unless otherwise stated.
+100 uL pfo = 0.085 g
+
+IAol (3-methyl-1-butanol)
+247.52 uL -> -0.96
+100 uL -> -2.28
+100 uL -> -3.6
+
+IAA
+196.75 uL -> -1.05
+100 uL -> -2.37
+100 uL -> -3.69
+
+etoh
+20 uL -> -2
+
+eta
+60.08 uL -> -1.54
+100 uL -> -2.86
+100 uL -> -4.18
+
+etb
+353.21 uL -> -0.82
+100 uL -> -2.15
+100 uL -> -3.47
+
+100 uL of each of above EXCEPT ETOH (+ 20uL etoh) into 1.6mL pfo for natural mix
+
+
+Control odors:
+- furfural (-4)
+- 1-octen-3-ol (-3)
+- methyl salicylate (-3)
+- 2-heptanone (-5)
+- valeric acid (-3)
+- (+ their mix. 1mL pfo + 200uL of each of the second-to-last dilutions)
+
+
+
