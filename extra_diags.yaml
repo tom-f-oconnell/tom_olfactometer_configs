@@ -1,0 +1,57 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: True
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ # (rather deep and signal not super strong)
+ # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
+ # currently unknown but maybe 3-20%) cleaning ammonia we have in the lab (in
+ # water)
+ - name: 5% cleaning ammonia in water
+   # TODO either convert 5% to log10_conc or ensure that lack of the key is
+   # supported (at least in the basic.py generator)
+   # (might want to support lack of conc anyway, for presenting stuff like
+   # natural odors w/o known concentrations)
+   glomerulus: VM1
+
+ - name: geranyl acetate
+   log10_conc: -4
+   glomerulus: VA6
+
+ - name: phenylacetaldehyde
+   log10_conc: -5
+   glomerulus: VL2a
+
+ - name: ethyl benzoate
+   log10_conc: -5
+   glomerulus: VM5v
+
+ - name: 1-heptanol
+   log10_conc: -4
+   glomerulus: VC3
+
+ - name: 3-methylthiol-1-propanol
+   log10_conc: -6
+   glomerulus: DM3
+

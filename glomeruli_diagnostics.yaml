@@ -27,7 +27,8 @@ odors:
  - name: 2,3-butanedione
    # Was at -6 for a while, but was also not consistently seeing VA2. Going to try -5
    # for a bit. First fly did have some other signal, but not a huge deal either.
-   log10_conc: -5
+   # Trying -4 as of ~2022-11-23, as this has always been inconsistent (weak/not-there).
+   log10_conc: -4
    glomerulus: VA2/?
 
  - name: trans-2-hexenal
@@ -64,7 +65,7 @@ odors:
    glomerulus: VC4
 
  - name: 2-butanone
-   log10_conc: -6
+   log10_conc: -5
    # Should be at least Or42a (according to Betty), which the Grabe atlas corresponds
    # with specifically VM7d, where they associate VM7v w/ Or59c (which presumably
    # doesn't respond to this concentration of 2-butanone?)
