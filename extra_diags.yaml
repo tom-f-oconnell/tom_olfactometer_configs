@@ -28,7 +28,13 @@ odors:
  # NOTE: Dhruv confirmed this was 5% of the already diluted (and that dilution
  # currently unknown but maybe 3-20%) cleaning ammonia we have in the lab (in
  # water)
- - name: 5% cleaning ammonia in water
+ - name: cleaning ammonia (in water)
+   log10_conc: -1.3
+   #
+   # this name causes some problems in my code, since not concentration not specified
+   # as usual (ommitted log10_conc field when I was using this)
+   #name: 5% cleaning ammonia in water
+   #
    # TODO either convert 5% to log10_conc or ensure that lack of the key is
    # supported (at least in the basic.py generator)
    # (might want to support lack of conc anyway, for presenting stuff like
