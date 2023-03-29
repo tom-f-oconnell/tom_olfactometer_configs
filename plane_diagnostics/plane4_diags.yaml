@@ -110,11 +110,13 @@ odors:
    abbrev: elac
    inventory: F-6
 
- - name: o-cresol
-   # Guessing somewhat
-   log10_conc: -3
-   glomerulus: VA5
-   inventory: NA-3
+ # TODO try to find replacement
+ # Was solid/gel at room temp, and behind a septum. Hard to work with.
+ #- name: o-cresol
+ #  # Guessing somewhat
+ #  log10_conc: -3
+ #  glomerulus: VA5
+ #  inventory: NA-3
 
  # TODO should probably be in plane3 if i'm gonna include here...
  #- name: 2-heptanone

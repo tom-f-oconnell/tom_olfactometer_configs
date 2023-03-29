@@ -67,8 +67,9 @@ odors:
    inventory: O-26
 
  # NOTE: dissolve in water
+ # Actually smelly?
  - name: hydrochloric acid
-   log10_conc: -2
+   log10_conc: -1
    glomerulus: DC4
    abbrev: HCl
    inventory: A-7
@@ -79,12 +80,14 @@ odors:
    abbrev: carene
    inventory: F-3
 
- - name: 1-hexen-3-ol
-   # Just guessing
-   log10_conc: -6
-   glomerulus: DC2
-   abbrev: 1h3ol
-   inventory: hasn't come in yet
+ # TODO find replacement in the meantime?
+ # Hasn't come in yet.
+ #- name: 1-hexen-3-ol
+ #  # Just guessing
+ #  log10_conc: -6
+ #  glomerulus: DC2
+ #  abbrev: 1h3ol
+ #  inventory: hasn't come in yet
 
  - name: farnesol
    # Guessing a bit. units in paper might have been in terms of saturated vapor?

@@ -78,12 +78,14 @@ odors:
    abbrev: p-cre
    inventory: NA-2
 
- - name: o-cresol
-   # Guessing somewhat
-   log10_conc: -3
-   glomerulus: VA5
-   abbrev: o-cre
-   inventory: NA-3
+ # TODO try to find replacement
+ # Was solid/gel at room temp, and behind a septum. Hard to work with.
+ #- name: o-cresol
+ #  # Guessing somewhat
+ #  log10_conc: -3
+ #  glomerulus: VA5
+ #  abbrev: o-cre
+ #  inventory: NA-3
 
  #######################################################################################
  # Stuff we might be more likely to see on plane above, but could be useful
