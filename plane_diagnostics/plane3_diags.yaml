@@ -1,0 +1,111 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ #######################################################################################
+ # Plane targets
+ #######################################################################################
+ # TODO add phenylacetaldehyde for VL2a?
+
+ # NOTE: also using this for DC2 in plane2 (position should be distinct)
+ # Concentration may need to differ from that used to target DC2.
+ #- name: 1-hexen-3-ol
+ #  # Guessing
+ #  log10_conc: -6
+ #  glomerulus: VM2
+ #  abbrev: 1h3ol
+ #  inventory: not in yet
+
+ - name: 4-heptanol
+   # Guessing
+   log10_conc: -6
+   glomerulus: VM2
+   abbrev: 4h-ol
+   inventory: F-55
+
+ - name: ethyl lactate
+   log10_conc: -7
+   glomerulus: VC4
+   abbrev: elac
+   inventory: F-6
+
+ - name: 2-butanone
+   log10_conc: -6
+   glomerulus: VM7d
+   abbrev: 2but
+   inventory: F-40
+
+ - name: 2,3-butanedione
+   log10_conc: -6
+   glomerulus: VA2
+   abbrev: 2,3-b
+   # Use newer one (F-39 probably)
+   inventory: F-38, F-39
+
+ - name: fenchone
+   # Guessing
+   log10_conc: -6
+   glomerulus: VC1
+   abbrev: fench
+   inventory: F-2
+
+ - name: p-cresol
+   # Guessing somewhat
+   log10_conc: -3
+   glomerulus: VC2
+   abbrev: p-cre
+   inventory: NA-2
+
+ - name: o-cresol
+   # Guessing somewhat
+   log10_conc: -3
+   glomerulus: VA5
+   abbrev: o-cre
+   inventory: NA-3
+
+ #######################################################################################
+ # Stuff we might be more likely to see on plane above, but could be useful
+ #######################################################################################
+ # TODO keep this one to find boundary between DC1 in plane2 and VC1 here?
+ - name: (1S)-(+)-carene
+   log10_conc: -3
+   glomerulus: DC1
+   abbrev: carene
+   inventory: F-3
+
+ - name: geranyl acetate
+   log10_conc: -4
+   glomerulus: VA6
+   abbrev: ga
+   inventory: 4-1, 4-2
+
+ - name: 2-heptanone
+   log10_conc: -6
+   glomerulus: VM5d
+   abbrev: 2h
+   inventory: F-31
+
+ # Leaving out ea/ma for now, as hopefully I can get enough of them in plane2, and just
+ # ignore them here.

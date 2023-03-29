@@ -1,24 +1,62 @@
 
+F:
+1,6,9,20,(33|34),(38|39),40
+
+O:
+25,26
+
+Fridge:
+4-16
+
+
 2,3-butanedione @ -5
+F-38,39
+3,5
 
 trans-2-hexenal @ -6
+4-16
+3,5,6
 
 methyl octanoate @ -3
+O-25
+3
 
 ethyl 3-hydroxybutyrate @ -6
+O-26
+3,5,6
 
 ethyl crotonate @ -6
+F-9
+3,5,6
 
 acetoin @ -6
+F-1
+3,5,6
 
 methyl acetate @ -7
+F-20
+3,5,7
 
 ethyl acetate @ -8
+F-33,34
+3,5,7,8
 
 ethyl lactate @ -7
+F-6
+3,5,7
 
 2-butanone @ -6
+F-40
+3,5,6
 
+4 + 7*3 + 2*2 + 1
+4 + 21 + 4 + 1
+30 vials if doing steps of 100 when possible, starting at -3
+
+3*4 + 6*3 + 2
+12 + 18 + 2
+32
+32 vials if doing steps of 100 when possible, but starting at -2
 
 50 vials (actually could be much less, if my strategy of starting at -3 and then
 mostly doing steps of 100 fold works well enough)

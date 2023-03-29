@@ -1,0 +1,91 @@
+
+Inventory to pull:
+A: 2, 6, 7
+
+NA: 2, 3
+
+F: 2, 3, 6, 20, 25, 28, 31, 34, 39, 40, 46, 55, 56*
+
+O: 18, 19, 26, 29, 51, 53
+
+Fridge: 4-16, 4-8, 4-2
+
+
+valeric acid (va) @ -4
+(A-2)
+
+trans-2-hexenal (t2h) @ -6
+(4-16)
+
+methyl salicylate (ms) @ -3
+(O-18)
+
+3-methylthiopropanol (3mtp) @ -6
+(O-5, F-46)
+
+alpha-terpineol (aterp) @ -6
+(O-19)
+
+perfume geosmin (geos) @ -5
+(O-28, O-29, 4-8)
+
+ethyl 3-hydroxybutyrate (e3hb) @ -6
+(O-26)
+
+methyl hexanoate (mhex) @ -7
+(F-24, F-25)
+
+geranyl acetate (ga) @ -4
+(4-1, 4-2)
+
+2-heptanone (2h) @ -6
+(F-31)
+
+methyl acetate (ma) @ -7
+(F-20)
+
+ethyl acetate (ea) @ -8
+(F-33, F-34)
+
+(1S)-(+)-carene (carene) @ -3
+(F-3)
+
+1-hexen-3-ol (1h3ol) @ -6
+(F-56, when it comes in)
+
+farnesol (farn) @ -2
+(O-53)
+
+4-heptanol (4hol) @ -6
+(F-55)
+
+ethyl lactate (elac) @ -7
+(F-6)
+
+2-butanone (2but) @ -6
+(F-40)
+
+2,3-butanedione (2,3-b) @ -6
+(F-38, F-39)
+
+fenchone (fench) @ -6
+(F-2)
+
+p-cresol (p-cre) @ -3
+(NA-2)
+
+o-cresol (o-cre) @ -3
+(NA-3)
+
+butyric acid (bacid) @ -4
+(A-6)
+
+1-hexanol (6ol) @ -6
+(F-28)
+
+acetophenone (aphe) @ -6
+(O-6, O-51)
+
+In water:
+hydrochloric acid (HCl) @ -2 (A-7)
+

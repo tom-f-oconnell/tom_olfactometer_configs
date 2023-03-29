@@ -1,0 +1,127 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ #######################################################################################
+ # Plane targets
+ #######################################################################################
+ # TODO add phenylacetaldehyde for VL2a?
+
+ - name: butyric acid
+   # Guessing
+   log10_conc: -4
+   glomerulus: VM3
+   abbrev: bacid
+   inventory: A-6
+
+ - name: 1-hexanol
+   log10_conc: -6
+   glomerulus: VC3
+   abbrev: 6ol
+   inventory: F-28
+
+ # Also in plane3
+ - name: 2,3-butanedione
+   log10_conc: -6
+   glomerulus: VA2
+   abbrev: 2,3-b
+   # Use newer one (F-39 probably)
+   inventory: F-38, F-39
+
+ - name: acetophenone
+   # Guessing
+   log10_conc: -6
+   glomerulus: VA3
+   abbrev: aphe
+   inventory: O-6, O-51
+
+ # Would like to avoid using this if I could...
+ #- name: putrescine
+ #  # Guessing
+ #  log10_conc: -4
+ #  glomerulus: VC5
+ #  abbrev: put
+ #  # As 1,4-diaminobutane (didn't I re-order it though? this that vial?)
+ #  inventory: B-5
+
+ - name: fenchone
+   # Guessing
+   log10_conc: -6
+   glomerulus: VC1
+   inventory: F-2
+
+ - name: p-cresol
+   # Guessing somewhat
+   log10_conc: -3
+   glomerulus: VC2
+   inventory: NA-2
+
+ #######################################################################################
+ # Stuff we might be more likely to see on plane above, but could be useful
+ #######################################################################################
+ # TODO probably take out one of these for putrescine...
+
+ # NOTE: one of these VM2 diags might be useful for clarifying d/v boundary wrt VM2 in
+ # plane above
+ #- name: 1-hexen-3-ol
+ #  # Guessing
+ #  log10_conc: -6
+ #  glomerulus: VM2
+ #  abbrev: 1h3ol
+ #  inventory: not in yet
+ - name: 4-heptanol
+   # Guessing
+   log10_conc: -6
+   glomerulus: VM2
+   abbrev: 4h-ol
+   inventory: F-55
+
+ - name: 2-butanone
+   log10_conc: -6
+   glomerulus: VM7d
+   abbrev: 2but
+   inventory: F-40
+
+ - name: ethyl lactate
+   log10_conc: -7
+   glomerulus: VC4
+   abbrev: elac
+   inventory: F-6
+
+ - name: o-cresol
+   # Guessing somewhat
+   log10_conc: -3
+   glomerulus: VA5
+   inventory: NA-3
+
+ # TODO should probably be in plane3 if i'm gonna include here...
+ #- name: 2-heptanone
+ #  log10_conc: -6
+ #  glomerulus: VM5d
+ #  abbrev: 2h
+ #  inventory: F-40
+
+ # Leaving out ea/ma for now, as hopefully I can get enough of them in plane2, and just
+ # ignore them here.

@@ -1,0 +1,106 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ #######################################################################################
+ # Plane targets
+ #######################################################################################
+ - name: methyl acetate
+   log10_conc: -7
+   glomerulus: DM4
+   abbrev: ma
+   inventory: F-20
+
+ - name: ethyl acetate
+   log10_conc: -8
+   glomerulus: DM1
+   abbrev: ea
+   inventory: F-33, F-34
+
+ # Could also try ethyl hexanoate, which we have at F-22
+ - name: methyl hexanoate
+   log10_conc: -7
+   glomerulus: DM2
+   abbrev: mhex
+   inventory: F-24, F-25
+
+ # Try these if methyl/ethyl hexanoate ~ -7 isn't useful for pulling out DM2
+ #- name: ethyl butyrate
+ #  log10_conc: -4
+ #  glomerulus: DM2
+ #  abbrev: eb
+ #  inventory: F-11
+
+ #- name: diethyl succinate
+ #  # Just guessing on conc
+ #  log10_conc: -4
+ #  glomerulus: DM2
+ #  #abbrev: 
+ #  inventory: O-54
+
+ - name: ethyl 3-hydroxybutyrate
+   log10_conc: -6
+   glomerulus: DM5/VM5d
+   abbrev: e3hb
+   inventory: O-26
+
+ # NOTE: dissolve in water
+ - name: hydrochloric acid
+   log10_conc: -2
+   glomerulus: DC4
+   abbrev: HCl
+   inventory: A-7
+
+ - name: (1S)-(+)-carene
+   log10_conc: -3
+   glomerulus: DC1
+   abbrev: carene
+   inventory: F-3
+
+ - name: 1-hexen-3-ol
+   # Just guessing
+   log10_conc: -6
+   glomerulus: DC2
+   abbrev: 1h3ol
+   inventory: hasn't come in yet
+
+ - name: farnesol
+   # Guessing a bit. units in paper might have been in terms of saturated vapor?
+   log10_conc: -2
+   glomerulus: DC3
+   abbrev: farn
+   inventory: O-53
+
+ - name: geranyl acetate
+   log10_conc: -4
+   glomerulus: VA6
+   abbrev: ga
+   inventory: 4-1, 4-2
+
+ - name: 2-heptanone
+   log10_conc: -6
+   glomerulus: VM5d
+   abbrev: 2h
+   inventory: F-31

@@ -41,7 +41,7 @@ odors:
 
  - name: ethyl 3-hydroxybutyrate
    log10_conc: -6
-   glomerulus: DM5
+   glomerulus: DM5/VM5d
 
  - name: ethyl crotonate
    log10_conc: -6
