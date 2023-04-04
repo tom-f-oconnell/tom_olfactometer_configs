@@ -1,0 +1,67 @@
+
+generator: basic
+
+#total_flow_ml_per_min: 2000.0
+#odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+#require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ #######################################################################################
+ # Plane targets
+ #######################################################################################
+ # TODO add phenylacetaldehyde for VL2a?
+
+ - name: p-cresol
+   # Guessing somewhat
+   log10_conc: -3
+   glomerulus: VC2
+   abbrev: p-cre
+   inventory: NA-2
+
+ # TODO try to find replacement (phenyl ethyl alcohol? or was that also for VC2?)
+ # Was solid/gel at room temp, and behind a septum. Hard to work with.
+ #- name: o-cresol
+ #  # Guessing somewhat
+ #  log10_conc: -3
+ #  glomerulus: VA5
+ #  abbrev: o-cre
+ #  inventory: NA-3
+
+ - name: butyric acid
+   # Guessing
+   log10_conc: -4
+   glomerulus: VM3
+   abbrev: bacid
+   inventory: A-6
+
+ - name: 1-hexanol
+   log10_conc: -6
+   glomerulus: VC3
+   abbrev: 6ol
+   inventory: F-28
+
+ - name: acetophenone
+   # Guessing
+   log10_conc: -6
+   glomerulus: VA3
+   abbrev: aphe
+   inventory: O-6, O-51
+
