@@ -1,8 +1,8 @@
-
 Inventory to pull:
-A: 2, 6, 7
+A: 2, 7
 
-NA: 2, 3
+*=don't currently have / not currently using
+NA: 2, 3*
 
 F: 2, 3, 6, 20, 25, 28, 31, 34, 39, 40, 46, 55, 56*
 
@@ -20,10 +20,10 @@ trans-2-hexenal (t2h) @ -6
 methyl salicylate (ms) @ -3
 (O-18)
 
-3-methylthiopropanol (3mtp) @ -6
+3-methylthiopropanol (3mtp) @ -5
 (O-5, F-46)
 
-alpha-terpineol (aterp) @ -6
+alpha-terpineol (aterp) @ -3
 (O-19)
 
 perfume geosmin (geos) @ -5
@@ -68,24 +68,23 @@ ethyl lactate (elac) @ -7
 2,3-butanedione (2,3-b) @ -6
 (F-38, F-39)
 
-fenchone (fench) @ -6
+fenchone (fench) @ -5
 (F-2)
 
 p-cresol (p-cre) @ -3
 (NA-2)
 
+(if I order a safer one. current large bottle is scary, with this being a solid at room
+temp, despite low melting point)
 o-cresol (o-cre) @ -3
 (NA-3)
-
-butyric acid (bacid) @ -4
-(A-6)
 
 1-hexanol (6ol) @ -6
 (F-28)
 
-acetophenone (aphe) @ -6
+acetophenone (aphe) @ -5
 (O-6, O-51)
 
 In water:
-hydrochloric acid (HCl) @ -2 (A-7)
+hydrochloric acid (HCl) @ -1 (A-7)
 

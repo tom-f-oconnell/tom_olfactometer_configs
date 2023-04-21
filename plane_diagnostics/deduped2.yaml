@@ -63,14 +63,12 @@ odors:
  #  inventory: hasn't come in yet
 
  - name: farnesol
-   # Guessing a bit. units in paper might have been in terms of saturated vapor?
    log10_conc: -2
    glomerulus: DC3
    abbrev: farn
    inventory: O-53
 
  - name: 4-heptanol
-   # Guessing
    log10_conc: -6
    glomerulus: VM2
    abbrev: 4h-ol
@@ -95,9 +93,14 @@ odors:
    # Use newer one (F-39 probably)
    inventory: F-38, F-39
 
+ # Could just use carene for these. It activates both DC1 and VC1, and at least for all
+ # the diagnostic test experiments (w/ plane spacing of 8-10 uM), there was always at
+ # least a plane separating those two.
+ #
+ # TODO try dropping this one. might wanna try analysis first (and at 12uM spacing),
+ # to double check not useful
  - name: fenchone
-   # Guessing
-   log10_conc: -6
+   log10_conc: -5
    glomerulus: VC1
    abbrev: fench
    inventory: F-2

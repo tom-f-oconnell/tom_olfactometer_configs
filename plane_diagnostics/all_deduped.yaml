@@ -1,0 +1,222 @@
+generator: basic
+
+#total_flow_ml_per_min: 2000.0
+#odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+#require_flow_controllers: False
+
+# With this False, will use odor order in list below to assign odors to runs
+# (when # valves < # odors).
+randomly_split_odors_into_runs: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+# TODO maybe add support for always having solvent first w/ the basic.py
+# generator? should i require specifying it in the 'odors:' list below?
+
+odors:
+ # TODO maybe i need a shorter pulse length for this one?
+ # (though no current way to special case pulse lengths within a run)
+ - name: valeric acid
+   log10_conc: -4
+   glomerulus: DM6
+   abbrev: va
+   inventory: A-2
+
+ - name: trans-2-hexenal
+   log10_conc: -6
+   glomerulus: DL5
+   abbrev: t2h
+   inventory: 4-16
+
+ - name: methyl salicylate
+   log10_conc: -3
+   glomerulus: DL1
+   abbrev: ms
+   inventory: O-18
+
+ # TODO maybe i need a shorter pulse length for this one?
+ - name: 3-methylthiopropanol
+   # TODO -5 gonna work? started at -6 and wasn't really seeing, but could have been for
+   # other reasons? saw in some 4-11 flies w/ -3 but only ~first trial. -3 seemed too
+   # high.
+   log10_conc: -5
+   glomerulus: DM3
+   abbrev: 3mtp
+   inventory: O-5, F-46
+
+ - name: alpha-terpineol
+   # NOTE: the actual conc is probably a bit lower, but the same order.
+   # Doesn't like the stay in the pipette...
+   log10_conc: -3
+   glomerulus: D
+   abbrev: a-terp
+   inventory: O-19
+
+ - name: perfume geosmin
+   log10_conc: -5
+   glomerulus: DA2
+   abbrev: geos
+   inventory: O-28, O-29, 4-8
+
+ - name: ethyl 3-hydroxybutyrate
+   log10_conc: -6
+   glomerulus: DM5/VM5d
+   abbrev: e3hb
+   inventory: O-26
+
+ - name: methyl hexanoate
+   log10_conc: -7
+   glomerulus: DM2
+   abbrev: mhex
+   inventory: F-24, F-25
+
+ # Maybe replace these last 2 w/ DM1/4 diagnostics, if where to draw the boundaries gets
+ # unclear.
+ - name: geranyl acetate
+   log10_conc: -4
+   glomerulus: VA6
+   abbrev: ga
+   inventory: 4-1, 4-2
+
+ - name: 2-heptanone
+   log10_conc: -6
+   glomerulus: VM5d
+   abbrev: 2h
+   inventory: F-31
+
+ - name: methyl acetate
+   log10_conc: -7
+   glomerulus: DM4
+   abbrev: ma
+   inventory: F-20
+
+ - name: ethyl acetate
+   log10_conc: -8
+   glomerulus: DM1
+   abbrev: ea
+   inventory: F-33, F-34
+
+ # NOTE: dissolve in water
+ # This is -1 v/v starting with our stock HCl, which I remember being ~30-40%(?),
+ # NOT aiming for the concentration we'd get if we had -1 v/v starting from pure HCl.
+ - name: hydrochloric acid
+   log10_conc: -1
+   glomerulus: DC4
+   abbrev: HCl
+   inventory: A-7
+
+ - name: (1S)-(+)-carene
+   log10_conc: -3
+   glomerulus: DC1
+   abbrev: carene
+   inventory: F-3
+
+ # TODO find replacement in the meantime?
+ # Hasn't come in yet.
+ #- name: 1-hexen-3-ol
+ #  # Just guessing
+ #  log10_conc: -6
+ #  glomerulus: DC2
+ #  abbrev: 1h3ol
+ #  inventory: hasn't come in yet
+
+ - name: farnesol
+   log10_conc: -2
+   glomerulus: DC3
+   abbrev: farn
+   inventory: O-53
+
+ - name: 4-heptanol
+   log10_conc: -6
+   glomerulus: VM2
+   abbrev: 4h-ol
+   inventory: F-55
+
+ - name: ethyl lactate
+   log10_conc: -7
+   glomerulus: VC4
+   abbrev: elac
+   inventory: F-6
+
+ - name: 2-butanone
+   log10_conc: -6
+   glomerulus: VM7d
+   abbrev: 2but
+   inventory: F-40
+
+ - name: 2,3-butanedione
+   log10_conc: -6
+   glomerulus: VA2
+   abbrev: 2,3-b
+   # Use newer one (F-39 probably)
+   inventory: F-38, F-39
+
+ # Could just use carene for these. It activates both DC1 and VC1, and at least for all
+ # the diagnostic test experiments (w/ plane spacing of 8-10 uM), there was always at
+ # least a plane separating those two.
+ #
+ # TODO try dropping this one. might wanna try analysis first (and at 12uM spacing),
+ # to double check not useful
+ - name: fenchone
+   log10_conc: -5
+   glomerulus: VC1
+   abbrev: fench
+   inventory: F-2
+
+ # Bit messy
+ - name: p-cresol
+   log10_conc: -3
+   glomerulus: VC2
+   abbrev: p-cre
+   inventory: NA-2
+
+ # TODO try to find replacement (phenyl ethyl alcohol? or was that also for VC2?)
+ # Was solid/gel at room temp, and behind a septum. Hard to work with.
+ #- name: o-cresol
+ #  # Guessing somewhat
+ #  log10_conc: -3
+ #  glomerulus: VA5
+ #  abbrev: o-cre
+ #  inventory: NA-3
+
+ # Also tried -3. Was somewhat broad then but still no apparent VM3 activation.
+ #- name: butyric acid
+ #  log10_conc: -4
+ #  glomerulus: VM3
+ #  abbrev: bacid
+ #  inventory: A-6
+
+ - name: 1-hexanol
+   log10_conc: -6
+   glomerulus: VC3
+   abbrev: 6ol
+   inventory: F-28
+
+ # Bit messy
+ - name: acetophenone
+   log10_conc: -5
+   glomerulus: VA3
+   abbrev: aphe
+   inventory: O-6, O-51
+
+ # TODO check i'm still seeing this reliably, and that it's specific
+ - name: phenylacetaldehyde
+   log10_conc: -5
+   glomerulus: VL2a
+   abbrev: paa
+   # I think I've been using 4-7
+   inventory: 4-6, 4-7
+

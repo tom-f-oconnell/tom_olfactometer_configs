@@ -27,19 +27,7 @@ odors:
  #######################################################################################
  # Plane targets
  #######################################################################################
- # TODO add phenylacetaldehyde for VL2a?
-
- # NOTE: also using this for DC2 in plane2 (position should be distinct)
- # Concentration may need to differ from that used to target DC2.
- #- name: 1-hexen-3-ol
- #  # Guessing
- #  log10_conc: -6
- #  glomerulus: VM2
- #  abbrev: 1h3ol
- #  inventory: not in yet
-
  - name: 4-heptanol
-   # Guessing
    log10_conc: -6
    glomerulus: VM2
    abbrev: 4h-ol
@@ -64,15 +52,16 @@ odors:
    # Use newer one (F-39 probably)
    inventory: F-38, F-39
 
- - name: fenchone
-   # Guessing
-   log10_conc: -6
-   glomerulus: VC1
-   abbrev: fench
-   inventory: F-2
+ # Could just use carene for these. It activates both DC1 and VC1, and at least for all
+ # the diagnostic test experiments (w/ plane spacing of 8-10 uM), there was always at
+ # least a plane separating those two.
+ #- name: fenchone
+ #  log10_conc: -5
+ #  glomerulus: VC1
+ #  abbrev: fench
+ #  inventory: F-2
 
  - name: p-cresol
-   # Guessing somewhat
    log10_conc: -3
    glomerulus: VC2
    abbrev: p-cre
@@ -86,6 +75,13 @@ odors:
  #  glomerulus: VA5
  #  abbrev: o-cre
  #  inventory: NA-3
+
+ - name: phenylacetaldehyde
+   log10_conc: -5
+   glomerulus: VL2a
+   abbrev: paa
+   # I think I've been using 4-7
+   inventory: 4-6, 4-7
 
  #######################################################################################
  # Stuff we might be more likely to see on plane above, but could be useful

@@ -27,14 +27,14 @@ odors:
  #######################################################################################
  # Plane targets
  #######################################################################################
- # TODO add phenylacetaldehyde for VL2a?
-
- - name: butyric acid
-   # Guessing
-   log10_conc: -4
-   glomerulus: VM3
-   abbrev: bacid
-   inventory: A-6
+ # Didn't work. Also tried -3. Activated some other stuff (maybe VC5, and something
+ # large and ventrolateral)
+ #- name: butyric acid
+ #  # Guessing
+ #  log10_conc: -4
+ #  glomerulus: VM3
+ #  abbrev: bacid
+ #  inventory: A-6
 
  - name: 1-hexanol
    log10_conc: -6
@@ -50,9 +50,11 @@ odors:
    # Use newer one (F-39 probably)
    inventory: F-38, F-39
 
+ # Bit messy... I think I see VA3 in there? Signal overlaps a bit w/ 2,3-b for VA2,
+ # and not clearly in a way that is either VA2 or VA3 (mayyybe could be tract?).
+ # Or could have been VM5v / VA7m/l maybe?
  - name: acetophenone
-   # Guessing
-   log10_conc: -6
+   log10_conc: -5
    glomerulus: VA3
    abbrev: aphe
    inventory: O-6, O-51
@@ -66,14 +68,16 @@ odors:
  #  # As 1,4-diaminobutane (didn't I re-order it though? this that vial?)
  #  inventory: B-5
 
- - name: fenchone
-   # Guessing
-   log10_conc: -6
-   glomerulus: VC1
-   inventory: F-2
+ # Could just use carene for these. It activates both DC1 and VC1, and at least for all
+ # the diagnostic test experiments (w/ plane spacing of 8-10 uM), there was always at
+ # least a plane separating those two.
+ #- name: fenchone
+ #  log10_conc: -5
+ #  glomerulus: VC1
+ #  abbrev: fench
+ #  inventory: F-2
 
  - name: p-cresol
-   # Guessing somewhat
    log10_conc: -3
    glomerulus: VC2
    inventory: NA-2
@@ -83,16 +87,7 @@ odors:
  #######################################################################################
  # TODO probably take out one of these for putrescine...
 
- # NOTE: one of these VM2 diags might be useful for clarifying d/v boundary wrt VM2 in
- # plane above
- #- name: 1-hexen-3-ol
- #  # Guessing
- #  log10_conc: -6
- #  glomerulus: VM2
- #  abbrev: 1h3ol
- #  inventory: not in yet
  - name: 4-heptanol
-   # Guessing
    log10_conc: -6
    glomerulus: VM2
    abbrev: 4h-ol

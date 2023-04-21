@@ -1,3 +1,6 @@
+# TODO convert all deduped<n>.yaml to one file (taking advantage of automatic splitting
+# across runs), and ultimately replace ../glomeruli_diagnostics.yaml with that, now that
+# we aren't so much planning to actually go plane-by-plane
 
 generator: basic
 
@@ -27,6 +30,8 @@ odors:
  #######################################################################################
  # Plane targets
  #######################################################################################
+ # TODO maybe i need a shorter pulse length for this one?
+ # (though no current way to special case pulse lengths within a run)
  - name: valeric acid
    log10_conc: -4
    glomerulus: DM6
@@ -45,16 +50,20 @@ odors:
    abbrev: ms
    inventory: O-18
 
+ # TODO maybe i need a shorter pulse length for this one?
  - name: 3-methylthiopropanol
-   # TODO probably go up to -5
-   log10_conc: -6
+   # TODO -5 gonna work? started at -6 and wasn't really seeing, but could have been for
+   # other reasons? saw in some 4-11 flies w/ -3 but only ~first trial. -3 seemed too
+   # high.
+   log10_conc: -5
    glomerulus: DM3
    abbrev: 3mtp
    inventory: O-5, F-46
 
  - name: alpha-terpineol
-   # Just guessing for -6.
-   log10_conc: -6
+   # NOTE: the actual conc is probably a bit lower, but the same order.
+   # Doesn't like the stay in the pipette...
+   log10_conc: -3
    glomerulus: D
    abbrev: a-terp
    inventory: O-19
@@ -74,7 +83,6 @@ odors:
    abbrev: e3hb
    inventory: O-26
 
- # See plane2 file for other candidate DM2 diagnostics (if this one doesn't work)
  - name: methyl hexanoate
    log10_conc: -7
    glomerulus: DM2
