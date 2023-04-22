@@ -1,14 +1,14 @@
 
 generator: basic
 
-#total_flow_ml_per_min: 2000.0
-#odor_flow_ml_per_min: 200.0
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
 
 # The presence of either of the flow rate variables above should imply that the
 # flow controllers are required, so this is saying that we will check the flow
 # controllers if we can, but otherwise we won't let that prevent the experiment
 # from starting. If connected, the set points and current flows will be checked.
-#require_flow_controllers: False
+require_flow_controllers: False
 
 # Reformatted into settings.timing.*_us by the generator
 pre_pulse_s: 7

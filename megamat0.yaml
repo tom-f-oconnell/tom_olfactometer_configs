@@ -4,6 +4,8 @@ generator: basic
 total_flow_ml_per_min: 2000.0
 odor_flow_ml_per_min: 200.0
 
+require_flow_controllers: False
+
 # Reformatted into settings.timing.*_us by the generator
 pre_pulse_s: 7
 pulse_s: 3

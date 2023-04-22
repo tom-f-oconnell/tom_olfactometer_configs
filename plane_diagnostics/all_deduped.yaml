@@ -1,13 +1,13 @@
 generator: basic
 
-#total_flow_ml_per_min: 2000.0
-#odor_flow_ml_per_min: 200.0
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
 
 # The presence of either of the flow rate variables above should imply that the
 # flow controllers are required, so this is saying that we will check the flow
 # controllers if we can, but otherwise we won't let that prevent the experiment
 # from starting. If connected, the set points and current flows will be checked.
-#require_flow_controllers: False
+require_flow_controllers: False
 
 # With this False, will use odor order in list below to assign odors to runs
 # (when # valves < # odors).
@@ -28,6 +28,19 @@ randomize_presentation_order: False
 
 odors:
  # TODO maybe i need a shorter pulse length for this one?
+ #
+ # Trying to change the order to see if that improves responses here at all.
+ # Used to be after methyl salicylate.
+ - name: 3-methylthiopropanol
+   # TODO -5 gonna work? started at -6 and wasn't really seeing, but could have been for
+   # other reasons? saw in some 4-11 flies w/ -3 but only ~first trial. -3 seemed too
+   # high.
+   log10_conc: -5
+   glomerulus: DM3
+   abbrev: 3mtp
+   inventory: O-5, F-46
+
+ # TODO maybe i need a shorter pulse length for this one?
  # (though no current way to special case pulse lengths within a run)
  - name: valeric acid
    log10_conc: -4
@@ -46,16 +59,6 @@ odors:
    glomerulus: DL1
    abbrev: ms
    inventory: O-18
-
- # TODO maybe i need a shorter pulse length for this one?
- - name: 3-methylthiopropanol
-   # TODO -5 gonna work? started at -6 and wasn't really seeing, but could have been for
-   # other reasons? saw in some 4-11 flies w/ -3 but only ~first trial. -3 seemed too
-   # high.
-   log10_conc: -5
-   glomerulus: DM3
-   abbrev: 3mtp
-   inventory: O-5, F-46
 
  - name: alpha-terpineol
    # NOTE: the actual conc is probably a bit lower, but the same order.
