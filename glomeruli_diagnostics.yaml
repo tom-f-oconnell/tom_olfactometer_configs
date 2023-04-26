@@ -26,6 +26,9 @@ randomize_presentation_order: False
 # TODO maybe add support for always having solvent first w/ the basic.py
 # generator? should i require specifying it in the 'odors:' list below?
 
+# TODO TODO try to find diagnostics for:
+# - VL1 (to help w/ VA4|5)
+# -
 odors:
  # TODO maybe i need a shorter pulse length for this one?
  #
@@ -42,11 +45,13 @@ odors:
 
  # TODO maybe i need a shorter pulse length for this one?
  # (though no current way to special case pulse lengths within a run)
+ # NOTE: dilute in water
  - name: valeric acid
    log10_conc: -4
    glomerulus: DM6
    abbrev: va
    inventory: A-2
+   solvent: water
 
  - name: trans-2-hexenal
    log10_conc: -6
@@ -110,6 +115,9 @@ odors:
    abbrev: ga
    inventory: 4-1, 4-2
 
+ # TODO replace with acetic acid -3? seems like it might be more reliable
+ # (in 2023-04-22/2 at least)
+ #
  # NOTE: dissolve in water
  # This is -1 v/v starting with our stock HCl, which I remember being ~30-40%(?),
  # NOT aiming for the concentration we'd get if we had -1 v/v starting from pure HCl.
