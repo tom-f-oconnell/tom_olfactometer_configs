@@ -1,0 +1,73 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+odors:
+ #- name: 2-butanone
+ #  log10_conc: -6
+ #  abbrev: 2b
+ #  solvent: water
+
+ - name: 2-butanone
+   log10_conc: -5
+   abbrev: 2b
+   solvent: water
+
+ - name: 2-butanone
+   log10_conc: -4
+   abbrev: 2b
+   solvent: water
+
+ - name: 2-butanone
+   log10_conc: -3
+   abbrev: 2b
+   solvent: water
+
+ - name: 2-butanone
+   log10_conc: -2
+   abbrev: 2b
+   solvent: water
+
+ - name: 2-butanone
+   log10_conc: -1
+   abbrev: 2b
+   solvent: water
+
+ - name: banana
+   log10_conc: -5
+   solvent: water
+
+ - name: banana
+   log10_conc: -4
+   solvent: water
+
+ - name: banana
+   log10_conc: -3
+   solvent: water
+
+ - name: banana
+   log10_conc: -2
+   solvent: water
+
+ - name: banana
+   log10_conc: -1
+   solvent: water
+
+ #- name: banana
+ #  log10_conc: 0
+ #  solvent: water
+
