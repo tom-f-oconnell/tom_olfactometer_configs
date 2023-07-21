@@ -1,0 +1,74 @@
+
+F:
+11, 16, 19, 28, 30, 31, 40, 43, 45
+
+O:
+7, 10, 16, 17, 18
+
+FA:
+1
+
+A:
+2
+
+Fridge;
+4-16
+
+
+linalool @ -3
+O-7
+
+B-citronellol @ -3
+O-10
+
+hexanal @ -3
+F-16, 4-15
+
+trans-2-hexenal @ -3
+4-16
+
+2-butanone @ -3
+F-40
+
+2-heptanone @ -3
+F-31
+
+methyl salicylate @ -3
+O-18
+
+benzaldehyde @ -3
+O-16
+
+1-pentanol @ -3
+F-43
+
+1-hexanol @ -3
+F-28
+
+1-octanol @ -3
+O-17
+
+pentyl acetate @ -3
+F-30
+
+ethyl butyrate @ -3
+F-11
+
+ethyl propionate @ -3
+F-45
+
+isoamyl acetate @ -3
+F-19
+
+15*2 = 30 2mL pfo vials
+
+
+In water:
+acetic acid @ -3
+FA-1
+
+valeric acid @ -3
+A-2
+
+4 2mL water vials
+
