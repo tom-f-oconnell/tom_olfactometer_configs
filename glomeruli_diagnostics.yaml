@@ -27,8 +27,92 @@ randomize_presentation_order: False
 # generator? should i require specifying it in the 'odors:' list below?
 
 # TODO TODO try to find diagnostics for:
-# - VL1 (to help w/ VA4|5)
-# -
+# - VA4
+# - VA5
+
+# Possible diagnostics to add:
+# - DA1
+#   - cVA
+#   (not sure if there is literally anything else DA1 responds to though.
+#   probably fine to leave out)
+#   - why does badel report activation by several other odors (3-oct, eb, 2,3-b, etc)?
+#     ephaptic? error?
+#
+# - VA4 (Or85d)
+#   - phenylethyl acetate (Grabe 2016 S3)?
+#   - phenylethyl propionate (Grabe 2016 S3)?
+#   - benzyl acetate (Grabe 2016 S3)?
+#   - 4-phenyl-2-butanol (Grabe 2016 S3)?
+#   - ethyl pentanoate (DoOR 2.0 paper. supporting data?)
+#   - linalool (badel)? TODO do i see activation?
+#
+# - VA1v (Or47b)
+#   - methyl laurate (Grabe 2016 S3)? (ordered)
+#   - (S)-(+)-carvone (DoOR 2.0 paper. supporting data?)
+#
+# - VA1d (Or47b)
+#   - methyl palmitate (Grabe 2016 S3)?
+#   - methyl myristate (Grabe 2016 S3)?
+#
+# - VA7l (Or46a)
+#   - phenol (Grabe 2016 S3)?
+#     - VA4 should be ruled out by this, according to Grabe data
+#       (want to rule out VA5 though...)
+#   - methyl benzoate (Grabe 2016 S3)?
+#     - VA4 should be ruled out by this, according to Grabe data
+#       (want to rule out VA5 though...)
+#   - should also respond to p-cresol
+#   - cyclohexanone
+#     - according to Marshall.2010.WT dataset as shown in DoOR, this should help
+#       distinguish from VA5 (Or49b)
+#
+# - VA7m (receptor unclear)
+#   - 2-oxovaleric acid / ethyl acetate (diff response wrt. VA7l) (badel) (ordered)
+#
+# - VM7v (Or59c)
+#   - ethyl benzoate (Grabe 2016 S3)?
+#   - ethyl butyrate (DoOR 2.0 paper. supporting data?)
+#
+# - VM5v (Or98a)
+#   - methyl / ethyl benzoate (Hallem)
+#
+# - VL2p (Ir31a)
+#   - 2-oxovaleric acid (DoOR 2.0 paper. Silbering table.) (ordered)
+#
+# - VM3 (Or9a)
+#   - 3-hydroxy-2-butanone (DoOR 2.0 paper. supporting data?)
+#   - 2-pentanol (source?)?
+#
+# - VL1 (Ir75d)
+#   - pyrrolidine (DoOR 2.0 paper. Silbering table.) (ordered)
+# - VM1 (Ir92a)
+#   - is this the one we used to try to get w/ ammonia (that was VM4 I think?)?
+#   - should also respond to dimethylamine according to DoOR 2.0 paper...
+#   - dimethylamine/ammonia according to Silbering
+#
+# - VM4 (Ir76a)
+#   - ammonium hydroxide (DoOR 2.0 paper. supporting data?)
+#   - phenylethylamine (Silbering table)
+#
+# - DP1l (Ir75a)
+#   - acetic acid (DoOR 2.0 paper. Silbering table.)
+#     - TODO do i see this? specific?
+#   - propionic acid (Silbering table)?
+#
+# - VC5 (Ir41a)
+#   - putrescene (DoOR 2.0 paper. silbering)
+#   - spermidine? might be similarly selective, and maybe less unpleasant to work with
+#     compared to putrescene? (silbering) (ordered)
+#
+# - VC2 (Or71a)
+#   - 4-ethylguaiacol (DoOR 2.0 paper. supporting data?)
+#
+# - DL2d/v (d=Ir75b,  v=Ir75c)
+#   - propanal (both?) (DoOR 2.0 paper. supporting data?)
+#   - butyric acid?
+#
+# - V
+#   - CO2
 odors:
  # TODO maybe i need a shorter pulse length for this one?
  #
@@ -77,6 +161,7 @@ odors:
    log10_conc: -5
    glomerulus: DA2
    abbrev: geos
+   # TODO TODO TODO which one did i actually use? one with tape on lid right?
    inventory: O-28, O-29, 4-8
 
  - name: ethyl 3-hydroxybutyrate
@@ -103,6 +188,7 @@ odors:
    abbrev: ea
    inventory: F-33, F-34
 
+   # According to Grabe 2016 table S3, VA4 should also respond to 2h (at what conc?)
  - name: 2-heptanone
    log10_conc: -6
    glomerulus: VM5d
@@ -126,7 +212,10 @@ odors:
    glomerulus: DC4
    abbrev: HCl
    inventory: A-7
+   solvent: water
 
+ # TODO probably rename to '(1S)-(+)-3-carene' as in Hallem (check same. don't actually
+ # see many people call it just this, so unclear where i got it from [if not a typo...])
  - name: (1S)-(+)-carene
    log10_conc: -3
    glomerulus: DC1
@@ -156,6 +245,7 @@ odors:
 
  - name: 2-butanone
    log10_conc: -6
+   # According to Grabe 2016 table S3, should also respond to 2h and va (at what conc?)
    glomerulus: VM7d
    abbrev: 2but
    inventory: F-40
@@ -192,7 +282,7 @@ odors:
 
  # Bit messy
  - name: acetophenone
-   log10_conc: -5
+   log10_conc: -4
    glomerulus: VA3
    abbrev: aphe
    inventory: O-6, O-51
@@ -228,4 +318,3 @@ odors:
    glomerulus: VC1
    abbrev: fench
    inventory: F-2
-
