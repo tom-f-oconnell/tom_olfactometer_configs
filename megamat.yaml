@@ -17,9 +17,12 @@ n_repeats: 3
 randomize_presentation_order: True
 
 odors:
- - name: pentanoic acid
+ # NOTE: dilute in water
+ # (pentanoic acid)
+ - name: valeric acid
    log10_conc: -3
    abbrev: VA
+   solvent: water
 
  - name: linalool
    log10_conc: -3
@@ -41,26 +44,35 @@ odors:
    log10_conc: -3
    abbrev: 2-but
 
+ # TODO VA4 activation (voshall 2008 review)?
  - name: 2-heptanone
    log10_conc: -3
    abbrev: 2h
 
+ # TODO see a response in VA7l? see wilson et al 2003
  - name: methyl salicylate
    log10_conc: -3
    abbrev: ms
 
+ # TODO see a response in VA7l? see wilson et al 2003
+ # TODO VA7m? see both l/m responses in badel
  - name: benzaldehyde
    log10_conc: -3
    abbrev: benz
 
+ # TODO do i see any DA3 activation? DA4m? (hallem)
  - name: 1-pentanol
    log10_conc: -3
    abbrev: 1-5ol
+
 # -----end first 10 odors ---------
+ # TODO any DA4m activation (hallem)?
+ # TODO TODO any DA4l activation (hallem)?
  - name: 1-hexanol
    log10_conc: -3
    abbrev: 1-6ol
 
+ # TODO DA3 response (badel)?
  - name: 1-octanol
    log10_conc: -3
    abbrev: 1-8ol
@@ -77,10 +89,13 @@ odors:
    log10_conc: -3
    abbrev: ep
 
+ # TODO VA4 activation (voshall 2008 review)?
  - name: isoamyl acetate
    log10_conc: -3
    abbrev: IaA
 
+ # NOTE: dilute in water
  - name: acetic acid
    log10_conc: -3
    abbrev: aa
+   solvent: water
