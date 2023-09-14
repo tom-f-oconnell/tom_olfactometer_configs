@@ -1,0 +1,40 @@
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+# The presence of either of the flow rate variables above should imply that the
+# flow controllers are required, so this is saying that we will check the flow
+# controllers if we can, but otherwise we won't let that prevent the experiment
+# from starting. If connected, the set points and current flows will be checked.
+require_flow_controllers: False
+
+# With this False, will use odor order in list below to assign odors to runs
+# (when # valves < # odors).
+randomly_split_odors_into_runs: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: False
+
+odors:
+ - name: methyl acetate
+   log10_conc: -2
+   abbrev: ma
+   inventory: F-20
+
+ - name: p-cresol
+   log10_conc: -2
+   abbrev: p-cre
+   inventory: NA-2
+
+ - name: 1,4-diaminobutane
+   log10_conc: -2
+   abbrev: 1,4-da
+   inventory: NA-2
