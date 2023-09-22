@@ -1,0 +1,102 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 7
+pulse_s: 3
+post_pulse_s: 20
+
+n_repeats: 3
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: True
+
+odors:
+ - name: benzyl benzoate
+   log10_conc: -2
+   abbrev: bbenz
+
+ - name: beta-myrcene
+   log10_conc: -3
+   abbrev: B-myr
+
+ - name: (-)-alpha-pinene
+   log10_conc: -3
+   abbrev: -aPine
+
+ - name: longifolene
+   log10_conc: -2
+   abbrev: long
+
+ - name: (-)-beta-caryophyllene
+   log10_conc: -3
+   abbrev: -bCar
+
+ - name: eucalyptol
+   log10_conc: -3
+   abbrev: euc
+
+ # NOTE: this is also in my diagnostics, at this concentration. could exclude from
+ # diagnostics for now, while doing these experiments.
+ - name: geosmin
+   log10_conc: -5
+   abbrev: geos
+
+ - name: 2-methylisoborneol
+   log10_conc: -4
+   abbrev: 2-mib
+
+ - name: 1-octen-3-one
+   log10_conc: -5
+   abbrev: 1o3one
+
+ - name: cis-4-heptenal
+   log10_conc: -5
+   abbrev: Z4-7al
+
+ - name: 1-penten-3-one
+   log10_conc: -5
+   abbrev: 1p3one
+
+ - name: (+)-pulegone
+   log10_conc: -3
+   abbrev: +pul
+
+ - name: guaiacol
+   log10_conc: -4
+   abbrev: guai
+
+ - name: methyl chavicol
+   log10_conc: -3
+   abbrev: mchav
+
+ - name: phenethylamine
+   log10_conc: -4
+   abbrev: PEA
+
+ # NOTE: also in diagnostics at this conc
+ - name: phenylacetaldehyde
+   log10_conc: -5
+   abbrev: PAA
+
+ - name: ethyl octanoate
+   log10_conc: -2
+   abbrev: EtOct
+
+ - name: 2-methylbutyl acetate
+   log10_conc: -3
+   abbrev: 2-mba
+
+ - name: 1-propanol
+   log10_conc: -3
+   abbrev: 1-3ol
+
+ - name: geraniol
+   log10_conc: -2
+   abbrev: ger
+
