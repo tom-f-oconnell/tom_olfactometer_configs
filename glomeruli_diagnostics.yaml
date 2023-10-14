@@ -16,7 +16,7 @@ randomly_split_odors_into_runs: False
 # Reformatted into settings.timing.*_us by the generator
 pre_pulse_s: 7
 pulse_s: 3
-post_pulse_s: 20
+post_pulse_s: 7
 
 n_repeats: 3
 

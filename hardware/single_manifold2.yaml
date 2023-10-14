@@ -26,7 +26,7 @@ carrier_flow_controller_address: H
 # contain MFCs behind them (or equipment that you wouldn't mind sending ~arbitrary
 # serial commands to). [5296, 13328] are the vendor and product IDs for the Startech
 # adapters we have (at least the one in use downstairs).
-safe_usb_ids_to_check_for_mfcs: [[5296, 13328]]
+#safe_usb_ids_to_check_for_mfcs: [[5296, 13328]]
 
 timing_output_pin: 34
 recording_indicator_pin: 36
