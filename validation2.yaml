@@ -38,6 +38,7 @@ odors:
  - name: 2-methylisoborneol
    log10_conc: -3
    abbrev: 2-mib
+   solvent: water
 
  - name: 1-octen-3-one
    log10_conc: -4
@@ -46,10 +47,6 @@ odors:
  - name: cis-4-heptenal
    log10_conc: -4
    abbrev: Z4-7al
-
- #- name: 1-penten-3-one
- #  log10_conc: -5
- #  abbrev: 1p3one
 
  - name: (+)-pulegone
    log10_conc: -2
@@ -62,6 +59,7 @@ odors:
  - name: phenethylamine
    log10_conc: -4
    abbrev: PEA
+   solvent: water
 
  # NOTE: also in diagnostics (at -5)
  - name: phenylacetaldehyde
@@ -111,3 +109,4 @@ odors:
  - name: 1-penten-3-one
    log10_conc: -5
    abbrev: 1p3one
+   solvent: water
