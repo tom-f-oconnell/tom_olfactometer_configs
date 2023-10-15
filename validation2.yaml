@@ -17,6 +17,51 @@ n_repeats: 3
 randomize_presentation_order: True
 
 odors:
+ # NOTE: also in diagnostics (at -5)
+ - name: phenylacetaldehyde
+   log10_conc: -4
+   abbrev: PAA
+
+ - name: guaiacol
+   log10_conc: -3
+   abbrev: guai
+
+ - name: cis-4-heptenal
+   log10_conc: -4
+   abbrev: Z4-7al
+
+ - name: 1-propanol
+   log10_conc: -3
+   abbrev: 1-prop
+
+ # NOTE: this is also in my diagnostics, at this concentration. could exclude from
+ # diagnostics for now, while doing these experiments.
+ - name: geosmin
+   log10_conc: -5
+   abbrev: geos
+
+ - name: 2-methylisoborneol
+   log10_conc: -4
+   abbrev: 2-mib
+   solvent: water
+
+ - name: 1-octen-3-one
+   log10_conc: -4
+   abbrev: 1o3one
+
+ - name: ethyl octanoate
+   log10_conc: -2
+   abbrev: EtOct
+
+ - name: phenethylamine
+   log10_conc: -4
+   abbrev: PEA
+   solvent: water
+
+ - name: 2-methylbutyl acetate
+   log10_conc: -3
+   abbrev: 2-mba
+
  - name: beta-myrcene
    log10_conc: -2
    abbrev: B-myr
@@ -29,54 +74,9 @@ odors:
    log10_conc: -2
    abbrev: euc
 
- # NOTE: this is also in my diagnostics, at this concentration. could exclude from
- # diagnostics for now, while doing these experiments.
- - name: geosmin
-   log10_conc: -5
-   abbrev: geos
-
- - name: 2-methylisoborneol
-   log10_conc: -3
-   abbrev: 2-mib
-   solvent: water
-
- - name: 1-octen-3-one
-   log10_conc: -4
-   abbrev: 1o3one
-
- - name: cis-4-heptenal
-   log10_conc: -4
-   abbrev: Z4-7al
-
  - name: (+)-pulegone
    log10_conc: -2
    abbrev: +pul
-
- - name: guaiacol
-   log10_conc: -3
-   abbrev: guai
-
- - name: phenethylamine
-   log10_conc: -4
-   abbrev: PEA
-   solvent: water
-
- # NOTE: also in diagnostics (at -5)
- - name: phenylacetaldehyde
-   log10_conc: -4
-   abbrev: PAA
-
- - name: ethyl octanoate
-   log10_conc: -2
-   abbrev: EtOct
-
- - name: 2-methylbutyl acetate
-   log10_conc: -3
-   abbrev: 2-mba
-
- - name: 1-propanol
-   log10_conc: -3
-   abbrev: 1-prop
 
  - name: sabinene
    log10_conc: -3
@@ -85,14 +85,6 @@ odors:
  - name: menthone
    log10_conc: -3
    abbrev: menth
-
- - name: geraniol
-   log10_conc: -3
-   abbrev: ger
-
- - name: methyl chavicol
-   log10_conc: -3
-   abbrev: mchav
 
  - name: benzyl benzoate
    log10_conc: -2
@@ -109,4 +101,13 @@ odors:
  - name: 1-penten-3-one
    log10_conc: -5
    abbrev: 1p3one
+
+ - name: methyl chavicol
+   log10_conc: -3
+   abbrev: mchav
+
    solvent: water
+ - name: geraniol
+   log10_conc: -3
+   abbrev: ger
+
