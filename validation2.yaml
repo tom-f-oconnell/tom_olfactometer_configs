@@ -33,6 +33,7 @@ odors:
  - name: 1-propanol
    log10_conc: -3
    abbrev: 1-prop
+   solvent: water
 
  # NOTE: this is also in my diagnostics, at this concentration. could exclude from
  # diagnostics for now, while doing these experiments.
@@ -106,7 +107,6 @@ odors:
    log10_conc: -3
    abbrev: mchav
 
-   solvent: water
  - name: geraniol
    log10_conc: -3
    abbrev: ger
