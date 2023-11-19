@@ -25,11 +25,15 @@ group2_flow_controller_address: I
 
 carrier_flow_controller_address: H
 
+# Commented just so generated outputs won't have flow stuff at all.
+# Would work without this, but outputs would be a bit more cluttered when manually
+# inspecting / editing.
+#
 # Tuples of USB (vendor ID, product ID) for USB-to-serial adapters that will only
 # contain MFCs behind them (or equipment that you wouldn't mind sending ~arbitrary
 # serial commands to). [5296, 13328] are the vendor and product IDs for the Startech
 # adapters we have (at least the one in use downstairs).
-safe_usb_ids_to_check_for_mfcs: [[5296, 13328]]
+#safe_usb_ids_to_check_for_mfcs: [[5296, 13328]]
 
 timing_output_pin: 34
 recording_indicator_pin: 36
