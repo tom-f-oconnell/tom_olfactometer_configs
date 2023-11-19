@@ -38,7 +38,7 @@ odors:
  # NOTE: this is also in my diagnostics, at this concentration. could exclude from
  # diagnostics for now, while doing these experiments.
  - name: geosmin
-   log10_conc: -5
+   log10_conc: -4
    abbrev: geos
 
  - name: 2-methylisoborneol
@@ -68,11 +68,13 @@ odors:
    abbrev: B-myr
 
  - name: (-)-alpha-pinene
-   log10_conc: -2
+   # 63.2uL into a TOTAL volume of 2mL
+   log10_conc: -1.5
    abbrev: -aPine
 
  - name: eucalyptol
-   log10_conc: -2
+   # 35.5uL into a TOTAL volume of 2mL
+   log10_conc: -1.75
    abbrev: euc
 
  - name: (+)-pulegone
@@ -108,6 +110,6 @@ odors:
    abbrev: mchav
 
  - name: geraniol
-   log10_conc: -3
+   log10_conc: -2
    abbrev: ger
 
