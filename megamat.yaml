@@ -21,7 +21,7 @@ odors:
  # (pentanoic acid)
  - name: valeric acid
    log10_conc: -3
-   abbrev: VA
+   abbrev: va
    solvent: water
 
  - name: linalool

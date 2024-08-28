@@ -21,22 +21,30 @@ odors:
  - name: ethanol
    log10_conc: -2
    abbrev: etoh
+   # TODO both still there? which to use? (F-50 should be reagent grade, if there)
+   inventory: F-36, F-50
 
  - name: isoamyl alcohol
    log10_conc: -3.6
    abbrev: IAol
+   # previously had used aliquots in 4-11 (don't think those came from F-51? not sure.)
+   inventory: 4-11, F-51
 
  - name: isoamyl acetate
    log10_conc: -3.7
    abbrev: IAA
+   inventory: F-19
 
  - name: ethyl acetate
    log10_conc: -4.2
    abbrev: ea
+   inventory: F-33, F-34
 
  - name: ethyl butyrate
    log10_conc: -3.5
    abbrev: eb
+   # previous F-10 seems to have been superceded after it ran out?
+   inventory: F-11
 
  - name: kiwi approx.
    log10_conc: -2
@@ -44,7 +52,14 @@ odors:
  - name: kiwi approx.
    log10_conc: -1
 
+ # all components above, all mixed into one pfo vial
  - name: kiwi approx.
    log10_conc: 0
    abbrev: kmix
+
+ # '-2' as in top 2 (most activating) components, not the concentration.
+ - name: kmix-2
+   # ea @ -4.2 and eb @ -3.5 (similar to kmix, but just w/ top 2 components)
+   log10_conc: 0
+   abbrev: ea+eb
 

@@ -25,7 +25,10 @@ etb
 100 uL -> -2.15
 100 uL -> -3.47
 
-100 uL of each of above EXCEPT ETOH (+ 20uL etoh) into 1.6mL pfo for natural mix
+100 uL of each of above EXCEPT ETOH (+ 20uL etoh) into 1.6mL (1.36g) pfo for natural mix
+
+100 uL of eta + etb into 1.8mL (1.53g) pfo for kmix-2 (like above but just top 2
+components)
 
 
 Control odors:
@@ -34,7 +37,11 @@ Control odors:
 - methyl salicylate (-3)
 - 2-heptanone (-5)
 - valeric acid (-3)
-- (+ their mix. 1mL pfo + 200uL of each of the second-to-last dilutions)
+- + their mix. 1mL (0.85g) pfo + 200uL of each of the second-to-last dilutions
+- + cmix-2: 200uL of 1o3ol -2 and 2h -4 into 1.6mL (1.36g) pfo
 
 
-
+Inventory numbers:
+F: 11, 19, 31, 33, 36[/50], [51, once out of 4-11]
+O: 2, 4, 18
+A: 2
