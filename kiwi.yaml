@@ -39,12 +39,14 @@ odors:
    log10_conc: -4.2
    abbrev: ea
    inventory: F-33, F-34
+   alias: A
 
  - name: ethyl butyrate
    log10_conc: -3.5
    abbrev: eb
    # previous F-10 seems to have been superceded after it ran out?
    inventory: F-11
+   alias: B
 
  - name: kiwi approx.
    log10_conc: -2
@@ -56,6 +58,24 @@ odors:
  - name: kiwi approx.
    log10_conc: 0
    abbrev: kmix
+
+ # TODO support some kind of YAML list group for randomizing within that section?
+ # (-> use here for whether kmix-2 or the air-mixed version goes first, or this vs kmix
+ # maybe?)
+
+ # NOTE: these will be assigned to different manifolds (each with their own MFC), so
+ # that we don't have to rely on flow splitting evenly between multiple open valves on
+ # one manifold. If hardware config does not indicate we have multiple manifolds (each
+ # with their own balance pin and [assumed] MFC), we will not be able to run this YAML
+ # file.
+ #
+ # A, B here are defined as `alias` value for eta and etb above.
+ # this is currently only way to refer to odor vials within `air_mix` lists.
+ #
+ # these lists must be of length <= # of available odor manifolds (so we can still
+ # always only open one valve per manifold, at most. this is to not have to rely on flow
+ # being divided evenly between simultaneously open valves on a single manifold)
+ - air_mix: [A, B]
 
  # '-2' as in top 2 (most activating) components, not the concentration.
  - name: kmix-2

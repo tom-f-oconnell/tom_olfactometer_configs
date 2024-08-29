@@ -44,11 +44,13 @@ odors:
    log10_conc: -5
    abbrev: 2h
    inventory: F-31
+   alias: A
 
  - name: 1-octen-3-ol
    log10_conc: -3
    abbrev: 1o3ol
    inventory: O-4
+   alias: B
 
  - name: control mix
    log10_conc: -2
@@ -60,6 +62,15 @@ odors:
  - name: control mix
    log10_conc: 0
    abbrev: cmix
+
+ # NOTE: these will be assigned to different manifolds (each with their own MFC), so
+ # that we don't have to rely on flow splitting evenly between multiple open valves on
+ # one manifold. If hardware config does not indicate we have multiple manifolds (each
+ # with their own balance pin and [assumed] MFC), we will not be able to run this YAML
+ # file.
+ #
+ # referring to aliases for 1o3ol and 2h vials above
+ - air_mix: [A, B]
 
  # '-2' as in top 2 (most activating) components, not the concentration.
  - name: cmix-2
