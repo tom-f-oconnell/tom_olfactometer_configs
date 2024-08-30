@@ -17,24 +17,25 @@ co2_pin: 53
 # valves (and is that the max driveable w/ 2 of the valve driving chips i'm
 # using? or are they 10 channels each?)
 
-# Top row of Remy's second manifold that I had been working with, wired into the
+# Top row of Remy's second (back) manifold that I had been working with, wired into the
 # yellow-tape-labelled DB9 cable to my newest (as of start of 2021) electronics
 # assembly.
 available_group1_valve_pins: [37, 38, 39, 40, 41]
 group1_balance_pin: 42
-# TODO TODO check this is correct as i have things configured
+# Right (of 2 lower) MFC (one that is hard to see around the box)
 group1_flow_controller_address: J
 
-# Top row of the manifold that I bought and assembled fully myself. Connected to
-# the DB9 cable WITHOUT the yellow tape, also connected to my newest
-# electronics. If the bottom row of this manifold (also via the cable with the
-# yellow tape) is connected, that configuration corresponds to
+# Top row of the (left/close) manifold that I bought and assembled fully
+# myself. Connected to the DB9 cable WITHOUT the yellow tape, also connected to
+# my newest electronics. If the bottom row of this manifold (also via the cable
+# with the yellow tape) is connected, that configuration corresponds to
 # single_manifold2.yaml.
 available_group2_valve_pins: [45, 46, 47, 48, 49]
 group2_balance_pin: 50
-# TODO TODO check this is correct as i have things configured
+# Left (of 2 lower) MFC.
 group2_flow_controller_address: I
 
+# The MFC in the back, on taller posts.
 carrier_flow_controller_address: H
 
 # (was) Commented just so generated outputs won't have flow stuff at all.
@@ -50,7 +51,7 @@ carrier_flow_controller_address: H
 #
 # linux: `lsbusb`
 # windows: Device manager -> find device + right click on it -> Properties -> Details ->
-# Hardware IDs (from drop down) (should look like "HID\VID_0403&PID_6001"
+# Hardware IDs (from drop down) (should look like "HID\VID_0403&PID_6001")
 #
 # (they will be in the form of 4 hexadecimal digits, which you should convert to
 # decimal)
@@ -63,7 +64,7 @@ carrier_flow_controller_address: H
 # (there might have been 2 such older devices, maybe only one of which was working for
 # me?)
 #
-# VID=0x0403 (1027), PID=0x0003 (24577): newer StarTech 8 port device (ICUSB2328I on
+# VID=0x0403 (1027), PID=0x6001 (24577): newer StarTech 8 port device (ICUSB2328I on
 #   bottom [not sure if last character is 1/l/I], as well as 609100737 on warranty
 #   sticker)
 safe_usb_ids_to_check_for_mfcs: [[1027, 24577], [5296, 13328]]
