@@ -59,13 +59,14 @@ carrier_flow_controller_address: H
 #
 # in listed device IDs below (in comments), the decimal version of each ID is in parens
 #
-# VID=0x14B0 (5296), PID=0x3410 (13328): older 4-port (also, I thought) StarTech device.
-# TODO get other model #s / identifiers off this older box.
-# (there might have been 2 such older devices, maybe only one of which was working for
-# me?)
+# VID=0x14B0 (5296), PID=0x3410 (13328): older 4-port (also, I thought) StarTech device
+# (ICUSB2324X)
+#
+# TODO check w/ thor support if this VID/PID combo is going to necessarily cause issues?
+# seems ECU might use same chip. maybe it's not an issue w/ newer versions (> ThorImage
+# 3.0) though... just commenting for now and using older 4 port box.
 #
 # VID=0x0403 (1027), PID=0x6001 (24577): newer StarTech 8 port device (ICUSB2328I on
-#   bottom [not sure if last character is 1/l/I], as well as 609100737 on warranty
-#   sticker)
-safe_usb_ids_to_check_for_mfcs: [[1027, 24577], [5296, 13328]]
+#   bottom [last char is I, not 1/l], as well as 609100737 on warranty sticker)
+safe_usb_ids_to_check_for_mfcs: [[1027, 24577]] #, [5296, 13328]]
 
