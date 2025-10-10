@@ -1,0 +1,147 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 500.0
+
+require_flow_controllers: False
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 10
+pulse_s: 10
+post_pulse_s: 40
+
+n_repeats: 2
+
+# If this is False, the odors will be presented in the order in the list below.
+randomize_presentation_order: True
+
+consecutive_repeats: False
+independent_block_shuffles: True
+
+odors:
+
+ - name: p-cresol
+   log10_conc: -2
+   solvent: pfo
+   abbrev: p-cre
+   inventory: NA-2
+   
+ - name: perfume geosmin
+   log10_conc: -2
+   solvent: pfo
+   abbrev: geos
+   inventory: O-28, O-29, 4-8
+
+ - name: isoamyl acetate
+   log10_conc: -2
+   solvent: pfo
+   abbrev: IaA
+   inventory: F-19
+   
+ - name: menthone
+   log10_conc: -2
+   solvent: pfo
+   abbrev: men
+   inventory: F-66
+   
+ - name: 3-methylthio-1-propanol
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 3m1pol
+   inventory: O-5
+
+ - name: 1,4-diaminobutane
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 1,4d
+   inventory: B-5
+
+ - name: 2,5-dimethylpyrazine
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 2,5d
+   inventory: O-15
+
+ - name: geranyl acetate
+   log10_conc: -2
+   solvent: pfo
+   abbrev: ga
+   inventory: 4-1, 4-2
+   
+ - name: trans-2-hexenal
+   log10_conc: -2
+   solvent: pfo
+   abbrev: t2h
+   inventory: 4-16
+
+ - name: methyl salicylate
+   log10_conc: -2
+   solvent: pfo
+   abbrev: ms
+   inventory: O-18
+   
+ - name: 4-methylcyclohexanol
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 4-mch
+   inventory: O-36
+   
+ - name: 3-octanol
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 3octol
+   inventory: O-9
+
+ - name: 1-hexanol
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 6ol
+   inventory: F-28
+   
+ - name: methyl acetate
+   log10_conc: -2
+   solvent: pfo
+   abbrev: ma
+   inventory: F-20
+ 
+ - name: 2-heptanone
+   log10_conc: -2
+   solvent: pfo
+   abbrev: 2h
+   inventory: F-31
+   
+ - name: acetic acid
+   log10_conc: -2
+   solvent: water
+   abbrev: acet
+   inventory: FA-1
+
+ - name: ethanol (15% in water)
+   solvent: water
+   abbrev: eth
+   inventory: F-50
+   
+ - name: ACV
+   log10_conc: -1
+   solvent: water
+   
+ - name: banana
+   log10_conc: 0
+
+ - name: mint
+   log10_conc: 0
+
+ - name: wine
+   log10_conc: 0
+
+ - name: pfo
+   log10_conc: 0
+   
+ - name: water
+   log10_conc: 0
+
+ - name: CO2 (25%)
+ 
+ 
+ 

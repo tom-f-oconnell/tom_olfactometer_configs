@@ -1,0 +1,58 @@
+
+generator: basic
+
+total_flow_ml_per_min: 2000.0
+odor_flow_ml_per_min: 200.0
+
+consecutive_repeats: False
+# NOTE: currently need this (which implies `randomize_presentation_order: True`), for
+# above `consecutive_repeats: False`, but may change to not need this in future
+# (for `consecutive_repeats: True`, which is the default, you want to use
+# `randomize_presentation_order: True/False` instead of this)
+independent_block_shuffle: True
+
+# Reformatted into settings.timing.*_us by the generator
+pre_pulse_s: 10
+pulse_s: 3
+post_pulse_s: 17
+
+n_repeats: 3
+
+odors:
+ - name: pfo
+   log10_conc: 0
+
+ - name: Wine
+   log10_conc: 0
+
+ - name: ACV
+   log10_conc: -1
+
+ - name: p-Cresol
+   log10_conc: -3
+
+ - name: 2-Butanone
+   log10_conc: -3
+
+ - name: Methyl-Salicylate
+   log10_conc: -3
+
+ - name: 1-octen-3ol
+   log10_conc: -3
+
+ - name: 4-MCH
+   log10_conc: -2
+
+ - name: 2-heptanone
+   log10_conc: -2
+
+ - name: CO2
+   log10_conc: -1
+
+# temporarily removing mentone/EtOH so odors fit into dual_manifold2 setup downstairs
+# - name: Menthone
+#   log10_conc: -3
+#
+# - name: EtOH
+#   log10_conc: -1
+
